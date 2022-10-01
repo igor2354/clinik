@@ -1,0 +1,98 @@
+.footer {
+	background: #8eaeba;
+	&__wrap {
+		padding: 60px 0;
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 45px;
+		border-bottom: 1px solid #fff;
+	}
+
+	&__logo {
+		flex-grow: 1;
+	}
+
+	&__menu {
+		margin-right: 215px;
+	}
+
+	&__menu-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 125px;
+		row-gap: 25px;
+	}
+
+	&__menu-item {
+		& a {
+			color: #fff;
+			transition: all 0.15s ease;
+			&:hover {
+				color: var(--main-color-text);
+			}
+		}
+	}
+
+	&__contact {
+	}
+
+	&__contact-item {
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__contact-name {
+		margin-bottom: 2px;
+		color: #e1e1e1;
+	}
+
+	&__contact-value {
+		color: #fff;
+		transition: all 0.15s ease;
+		&:hover {
+			color: var(--main-color-text);
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 20px;
+	}
+
+	&__group {
+		display: flex;
+	}
+
+	&__policy {
+		max-width: 250px;
+		&:not(:last-child) {
+			margin-right: 60px;
+		}
+		& a {
+			font-size: 16px;
+			color: #fff;
+			transition: all 0.15s ease;
+			&:hover {
+				color: var(--main-color-text);
+			}
+		}
+	}
+
+	&__age {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		color: #e1e1e1;
+		border: 1px solid #e1e1e1;
+		border-radius: 50%;
+	}
+}

@@ -39,9 +39,21 @@ a {
 	color: #fff;
 	background: #8eaeba;
 	border-radius: 40px;
+	transition: all 0.15s ease;
 	&.--white {
 		color: #8eaeba;
 		background: #fff;
+		&:hover {
+			background-color: #f3f3f3;
+			box-shadow: 0 5px 9px 0 rgba(255, 255, 255, 0.5);
+			transform: translateY(-4px);
+		}
+	}
+
+	&:not(.--white):hover {
+		background-color: #97bac7;
+		box-shadow: 0 5px 9px 0 #bde1ef;
+		transform: translateY(-4px);
 	}
 }
 
@@ -72,6 +84,9 @@ h3 {
 	font-size: 32px;
 	line-height: 130%;
 	color: var(--main-color-text);
+	& span {
+		color: var(--sub-color-text);
+	}
 }
 
 .slider-arrow-prev,

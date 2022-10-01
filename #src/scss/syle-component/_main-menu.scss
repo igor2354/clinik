@@ -22,6 +22,10 @@
 
 	&__link {
 		line-height: 140%;
+		transition: all 0.15s ease;
+		&:hover {
+			color: var(--sub-color-text);
+		}
 	}
 
 	&__submenu {

@@ -3,7 +3,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 5;
+	z-index: 50;
 	background: rgba(255, 255, 255, 0.7);
 	backdrop-filter: blur(20px);
 	&__wrap {
@@ -35,5 +35,11 @@
 		height: 60px;
 		background: #8eaeba;
 		border-radius: 100%;
+		transition: all 0.15s ease;
+		&:hover {
+			background-color: #97bac7;
+			box-shadow: 0 5px 9px 0 #bde1ef;
+			transform: translateY(-4px);
+		}
 	}
 }
