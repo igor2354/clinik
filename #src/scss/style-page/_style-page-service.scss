@@ -1,0 +1,178 @@
+.price-list {
+	cursor: pointer;
+	position: relative;
+	display: block;
+	padding-left: 55px;
+	font-weight: 400;
+	font-size: 18px;
+	color: #91abb8;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+		width: 50px;
+		height: 50px;
+		background: url("../img/file-pdf.svg") no-repeat center / contain;
+	}
+	& span {
+		display: block;
+	}
+}
+
+.service {
+	&__wrap {
+		padding-bottom: 120px;
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 0.395fr 1fr;
+		gap: 70px;
+	}
+
+	&__column {
+	}
+
+	&__category {
+		&:not(:last-child) {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__title {
+		padding-left: 30px;
+		margin-bottom: 45px;
+	}
+
+	&__table {
+	}
+}
+.category-service {
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__list {
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		& a {
+			transition: all 0.3s ease;
+			&:hover {
+				color: #8eaeba;
+			}
+		}
+		&.added {
+			& a {
+				color: #8eaeba;
+			}
+		}
+	}
+}
+
+.added {
+}
+
+.table-service {
+	&__caption {
+		display: grid;
+		grid-template-columns: 1fr 0.915fr;
+		gap: 60px;
+		padding: 0 30px 20px 30px;
+	}
+
+	&__title {
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+}
+.item-service {
+	cursor: pointer;
+	position: relative;
+	padding: 30px;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background: #8eaeba;
+		&::before {
+			opacity: 0;
+		}
+
+		& .item-service__name {
+			text-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff;
+			color: #fff;
+		}
+
+		& .item-service__price {
+			text-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff;
+			color: #fff;
+		}
+
+		& .item-service__btn {
+			opacity: 1;
+			visibility: visible;
+		}
+		& + .item-service {
+			&::before {
+				opacity: 0;
+			}
+		}
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 30px;
+		height: 1px;
+		background: #909090;
+		transition: all 0.3s ease;
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 0.915fr;
+		gap: 60px;
+	}
+
+	&__column {
+		&:nth-child(2) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&__name {
+		font-size: 24px;
+		line-height: 130%;
+		color: #2f2f2f;
+		transition: all 0.3s ease;
+	}
+
+	&__price {
+		margin-right: 20px;
+		font-size: 24px;
+		line-height: 130%;
+		color: #2f2f2f;
+		transition: all 0.3s ease;
+	}
+
+	&__btn {
+		opacity: 0;
+		visibility: hidden;
+		max-width: 230px;
+	}
+}

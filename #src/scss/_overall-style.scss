@@ -109,3 +109,48 @@ h3 {
 .slider-arrow-prev svg {
 	transform: rotate(180deg);
 }
+
+.content-top {
+	&__wrap {
+		padding: 90px 0 60px 0;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__column {
+	}
+
+	&__title {
+	}
+}
+
+.breadcrumbs {
+	margin-bottom: 30px;
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&__item {
+		position: relative;
+		&:not(:last-child) {
+			margin-right: 20px;
+			&::after {
+				content: "/";
+				position: absolute;
+				top: 50%;
+				right: -12px;
+				transform: translate(0, -52%);
+				color: #919291;
+			}
+		}
+
+		& span {
+			color: #919291;
+		}
+	}
+}
