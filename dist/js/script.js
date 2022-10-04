@@ -21,4 +21,25 @@ document.addEventListener("DOMContentLoaded", function () {
 			prevEl: ".slider-info .slider-arrow-prev",
 		},
 	});
+
+	let arrInputPlaceholder = Array.prototype.slice.call(document.querySelectorAll(".js-placeholder"));
+
+	if (arrInputPlaceholder.length > 0) {
+		arrInputPlaceholder.forEach((element) => {
+			let input = element.querySelector(".js-input");
+			let placeholder = element.querySelector(".js-text-place");
+
+			if (input != null && placeholder != null) {
+				input.addEventListener("focus", (e) => {
+					placeholder.classList.add("active-placeholder");
+				});
+
+				input.addEventListener("focusout", (e) => {
+					if (input.value.length == 0) {
+						placeholder.classList.remove("active-placeholder");
+					}
+				});
+			}
+		});
+	}
 });

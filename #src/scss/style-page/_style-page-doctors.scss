@@ -1,0 +1,152 @@
+.doctors {
+	&__wrap {
+		padding-bottom: 210px;
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 0.46fr 1fr;
+		gap: 60px;
+	}
+
+	&__column {
+	}
+
+	&__category {
+		&:not(:last-child) {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__list {
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 60px;
+		}
+	}
+}
+
+.category-doctors {
+	&:first-child {
+		& .category-doctors__title {
+			margin-bottom: 20px;
+		}
+	}
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__search {
+		position: relative;
+	}
+
+	&__search-input {
+		display: block;
+		width: 100%;
+		padding-bottom: 10px;
+		font-weight: 350;
+		font-size: 18px;
+		line-height: 140%;
+		color: var(--main-color-text);
+		border-bottom: 1px solid #919291;
+	}
+
+	&__placeholder {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-right: 25px;
+		color: #919291;
+		pointer-events: none;
+		&.active-placeholder {
+			opacity: 0;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translate(0, -50%);
+			width: 20px;
+			height: 20px;
+			background: url("../img/icon-search.svg") no-repeat center / contain;
+		}
+	}
+
+	&__list {
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		& a {
+			transition: all 0.3s ease;
+			&:hover {
+				color: #8eaeba;
+			}
+		}
+		&.added {
+			& a {
+				color: #8eaeba;
+			}
+		}
+	}
+}
+
+.card-doctors {
+	display: flex;
+	padding: 30px;
+	background: #ffffff;
+	box-shadow: 0px 9px 40px rgba(145, 146, 145, 0.3);
+	border-radius: 10px;
+	&__avatar {
+		margin-right: 20px;
+		flex-shrink: 0;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		overflow: hidden;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__group {
+	}
+
+	&__name {
+		margin-bottom: 20px;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 130%;
+		color: #2f2f2f;
+	}
+
+	&__post {
+		padding-bottom: 30px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #919291;
+	}
+
+	&__price {
+		margin-bottom: 15px;
+		color: #8eaeba;
+	}
+
+	&__bottons {
+		display: flex;
+	}
+
+	&__btn {
+		flex-grow: 1;
+		max-width: 200px;
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+}
