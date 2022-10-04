@@ -50,7 +50,20 @@ a {
 		}
 	}
 
-	&:not(.--white):hover {
+	&.--border {
+		background-color: #ffffff;
+		border: 1px solid #e1e1e1;
+		color: #8eaeba;
+		&:hover {
+			color: #ffffff;
+			background-color: #97bac7;
+			box-shadow: 0 5px 9px 0 #bde1ef;
+			border-color: #97bac7;
+			transform: translateY(-4px);
+		}
+	}
+
+	&:not(.--white):not(.--border):hover {
 		background-color: #97bac7;
 		box-shadow: 0 5px 9px 0 #bde1ef;
 		transform: translateY(-4px);
