@@ -1,0 +1,141 @@
+@@include("../components/_header.html")
+
+<main class="main">
+
+    <div class="content-top --gray">
+        <div class="container">
+            <div class="content-top__wrap">
+
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+                        <li class="breadcrumbs__item"><a href="#">Врачи</a></li>
+                        <li class="breadcrumbs__item"><span>Малышев Илья Владимирович</span></li>
+                    </ul>
+                </div>
+
+                <div class="content-top__row">
+                    <div class="content-top__column">
+                        <div class="content-top__title title-h1">
+                            Малышев<br> Илья Владимирович
+                        </div>
+
+                        <div class="content-top__text">Врач-остеопат, мануальный терапевт, врач спортивной<br> медицины,
+                            врач-реабилитолог, врач-педиатр</div>
+
+                        <div class="content-top__price">Прием от 3 000 ₽</div>
+                    </div>
+
+                    <div class="content-top__column">
+                        <div class="content-top__avatar">
+                            <img src="./img/avatr-medic.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <section class="medic">
+        <div class="container">
+            <div class="medic__wrap">
+                <div class="medic__title title-h2"></div>
+
+                <div class="medic__order appointment-doctor">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="addres --gray">
+        <div class="container">
+            <div class="addres__wrap">
+                <div class="addres__row">
+                    <div class="addres__column">
+                        <div class="addres__title title-h3">Санкт-Петербург – Клиника, Наличная улица, 40к1</div>
+
+                        <a href="#" class="addres__btn main-btn">Записаться на прием</a>
+                    </div>
+
+                    <div class="addres__column">
+                        <a href="tel:88128888888" class="addres__phone">8 (812) 888-88-88</a>
+                    </div>
+
+                    <div class="addres__column">
+                        <div class="addres__list-time">
+                            <div class="addres__item-time">
+                                <span>Понедельник</span>
+                                <span>08:00 — 21:00</span>
+                            </div>
+
+                            <div class="addres__item-time">
+                                <span>Вторник</span>
+                                <span>08:00 — 21:00</span>
+                            </div>
+
+                            <div class="addres__item-time">
+                                <span>Среда</span>
+                                <span>08:00 — 21:00</span>
+                            </div>
+
+                            <div class="addres__item-time">
+                                <span>Четверг</span>
+                                <span>08:00 — 21:00</span>
+                            </div>
+
+                            <div class="addres__item-time">
+                                <span>Пятница</span>
+                                <span>08:00 — 21:00</span>
+                            </div>
+
+                            <div class="addres__item-time">
+                                <span>Суббота</span>
+                                <span>09:00 — 19:00</span>
+                            </div>
+
+                            <div class="addres__item-time">
+                                <span>Воскресенье</span>
+                                <span>10:00 — 18:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="addres__map" id="map-addres">
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        ymaps.ready(function () {
+                            var myMap = new ymaps.Map("map-addres", {
+                                center: [59.949911, 30.231912],
+                                zoom: 15,
+                            });
+                            // Создаём макет содержимого.
+                            var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>');
+                            var myPlacemark = new ymaps.Placemark(
+                                myMap.getCenter(),
+                                {},
+                                {
+                                    iconLayout: "default#image",
+                                    iconImageHref: "./img/map-pin.svg",
+                                    iconImageSize: [60, 60],
+                                    iconImageOffset: [-5, -38],
+                                }
+                            );
+
+                            myMap.geoObjects.add(myPlacemark);
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include("../components/_footer.html")

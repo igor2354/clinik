@@ -230,6 +230,9 @@ h3 {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg); }
 
+.content-top.--gray {
+  background: #eef3f5; }
+
 .content-top__wrap {
   padding: 90px 0 60px 0; }
 
@@ -240,6 +243,30 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+
+.content-top__column:first-child {
+  max-width: 590px; }
+
+.content-top__text {
+  margin-top: 20px; }
+
+.content-top__price {
+  margin-top: 60px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 130%;
+  color: #8eaeba; }
+
+.content-top__avatar {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  overflow: hidden; }
+  .content-top__avatar img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
 
 .breadcrumbs {
   margin-bottom: 30px; }
