@@ -1,0 +1,178 @@
+.popup-general {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+
+	z-index: 1000;
+
+	background: rgba(0, 0, 0, 0.5);
+
+	&__center {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__scroll {
+		max-width: 810px;
+		width: 100%;
+		padding: 30px 15px;
+		overflow: auto;
+		max-height: 100vh;
+	}
+
+	&__body {
+		position: relative;
+		width: 100%;
+		background: #ffffff;
+	}
+
+	&__group-title {
+		position: relative;
+		padding: 50px 30px 55px 30px;
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__close {
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		right: 60px;
+		transform: translate(0, -50%);
+		width: 32px;
+		height: 32px;
+		background: url("../img/icon-close.svg") no-repeat center / contain;
+		transition: all 0.3s ease;
+		z-index: 3;
+	}
+
+	&__wrap {
+		padding: 0px 30px 38px 30px;
+	}
+
+	&__form {
+	}
+
+	&.modal {
+		display: none;
+	}
+
+	&.active {
+		&.modal {
+			display: block;
+		}
+	}
+
+	&.--step-1 {
+		& .popup-general__body {
+			box-shadow: 0px 9px 40px rgba(145, 146, 145, 0.3);
+			border-radius: 10px;
+			background: #eef3f5;
+		}
+	}
+}
+
+.doctors-popup {
+	&__slider {
+		margin-right: -29px;
+		& .swiper-slide {
+			max-width: 330px;
+		}
+
+		& .swiper-button-disabled {
+			opacity: 0.3;
+		}
+	}
+
+	&__arrows {
+		display: flex;
+		margin-bottom: 30px;
+		& .slider-arrow-two-prev {
+			margin-right: 20px;
+		}
+	}
+
+	&__card {
+	}
+}
+
+.card-doctors-popup {
+	padding-right: 30px;
+
+	&__wrap {
+		padding: 30px;
+		background: #ffffff;
+		box-shadow: 0px 9px 40px rgba(145, 146, 145, 0.3);
+		border-radius: 10px;
+	}
+
+	&__avatar {
+		width: 120px;
+		height: 120px;
+		flex-shrink: 0;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-bottom: 20px;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 130%;
+		color: #2f2f2f;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 140%;
+		color: #919291;
+		margin-bottom: 10px;
+	}
+
+	&__price {
+		font-weight: 400;
+		margin-bottom: 20px;
+	}
+
+	&__btn {
+	}
+}
+
+@media (max-width: 768px) {
+	.popup-general {
+		&__group-title {
+			padding: 16px 56px 16px 24px;
+		}
+
+		&__body {
+			padding-bottom: 24px;
+		}
+
+		&__title {
+			text-align: left;
+		}
+
+		&__close {
+			right: 16px;
+		}
+
+		&__wrap {
+			padding: 32px 24px;
+		}
+	}
+}
