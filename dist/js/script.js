@@ -53,6 +53,45 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
+	let datePic = document.querySelector(".calendar-doctor");
+
+	if (datePic != null) {
+		const picker = new Litepicker({
+			element: datePic,
+			inlineMode: true,
+			lang: "ru-RU",
+			highlightedDays: ["2022-10-15"],
+			setup: (picker) => {
+				picker.on("render:day", (ui) => {
+					console.log(12312331231);
+					sizeDate(ui);
+				});
+
+				picker.on("selected", (date1, date2) => {});
+			},
+		});
+
+		function sizeDate(el) {
+			let daysCalendar = el.querySelectorAll(".container__days > div");
+
+			if (daysCalendar.length > 0) {
+				daysCalendar.forEach((element, index, array) => {
+					element.style.height = Math.ceil(array[0].offsetWidth) + "px";
+				});
+			}
+
+			window.addEventListener("resize", function () {
+				if (daysCalendar.length > 0) {
+					daysCalendar.forEach((element, index, array) => {
+						element.style.height = Math.ceil(array[0].offsetWidth) + "px";
+					});
+				}
+			});
+		}
+
+		sizeDate(datePic);
+	}
+
 	// Открытие попапов МОЖНО УДАЛЯТЬ
 	let popupAllElem = Array.prototype.slice.call(document.querySelectorAll(".modal"));
 	let openButton = Array.prototype.slice.call(document.querySelectorAll(".js-modal-show"));

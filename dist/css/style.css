@@ -1152,8 +1152,6 @@ h3 {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     z-index: 3; }
-  .popup-general__wrap {
-    padding: 0px 30px 38px 30px; }
   .popup-general.modal {
     display: none; }
   .popup-general.active.modal {
@@ -1165,7 +1163,7 @@ h3 {
     background: #eef3f5; }
 
 .doctors-popup__slider {
-  margin-right: -29px; }
+  padding: 30px; }
   .doctors-popup__slider .swiper-slide {
     max-width: 330px; }
   .doctors-popup__slider .swiper-button-disabled {
@@ -1226,6 +1224,74 @@ h3 {
     right: 16px; }
   .popup-general__wrap {
     padding: 32px 24px; } }
+
+.info-doctors-popup {
+  position: relative;
+  padding: 30px;
+  background: rgba(142, 174, 186, 0.15); }
+  .info-doctors-popup__wrap {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 2; }
+  .info-doctors-popup__avatar {
+    width: 200px;
+    height: 200px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    border-radius: 50%;
+    margin-right: 30px;
+    overflow: hidden; }
+    .info-doctors-popup__avatar img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
+  .info-doctors-popup__name {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #2f2f2f; }
+  .info-doctors-popup__text {
+    margin-bottom: 30px; }
+  .info-doctors-popup__price {
+    font-weight: 400; }
+
+.time-doctors {
+  padding: 30px; }
+  .time-doctors__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+  .time-doctors__column:first-child {
+    padding-right: 30px;
+    border-right: 1px solid #919291; }
+  .time-doctors__column:last-child {
+    padding-left: 30px; }
+  .time-doctors__calendar .litepicker {
+    width: 100%;
+    font-family: "Circe", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%; }
+    .time-doctors__calendar .litepicker .container__months {
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+    .time-doctors__calendar .litepicker .container__days .day-item {
+      border-radius: 50%; }
+      .time-doctors__calendar .litepicker .container__days .day-item.is-today {
+        background: #8eaeba; }
+    .time-doctors__calendar .litepicker .container__months .month-item-header div > .month-item-name {
+      margin-right: 0; }
+    .time-doctors__calendar .litepicker .container__months .month-item-header div > .month-item-year {
+      display: none; }
+
+:root {
+  --litepicker-day-width: calc(100% / 7);
+  --litepicker-day-color: #919291;
+  --litepicker-is-today-color: #ffffff;
+  --litepicker-highlighted-day-color-bg: #fff;
+  --litepicker-highlighted-day-color: #2f2f2f; }
 
 .footer {
   background: #8eaeba; }
