@@ -37,7 +37,7 @@
 
 	&__group-title {
 		position: relative;
-		padding: 50px 30px 55px 30px;
+		padding: 20px 30px 20px 30px;
 	}
 
 	&__title {
@@ -182,7 +182,7 @@
 
 .info-doctors-popup {
 	position: relative;
-	padding: 30px;
+	padding: 15px 30px;
 	background: rgba(142, 174, 186, 0.15);
 
 	&__wrap {
@@ -193,11 +193,11 @@
 	}
 
 	&__avatar {
-		width: 200px;
-		height: 200px;
+		width: 150px;
+		height: 150px;
 		flex-shrink: 0;
 		border-radius: 50%;
-		margin-right: 30px;
+		margin-right: 50px;
 		overflow: hidden;
 		& img {
 			width: 100%;
@@ -217,7 +217,7 @@
 	}
 
 	&__text {
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 	}
 
 	&__price {
@@ -225,16 +225,16 @@
 	}
 
 	&__call {
-		margin-top: 30px;
+		margin-top: 15px;
 	}
 
 	&__call-text {
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 	}
 
 	&__phone {
 		font-weight: 400;
-		font-size: 32px;
+		font-size: 24px;
 		line-height: 130%;
 		color: #000000;
 	}
@@ -421,9 +421,9 @@
 }
 
 .result-doctors {
-	padding: 45px 30px;
+	padding: 25px 30px;
 	&__list {
-		margin-bottom: 45px;
+		margin-bottom: 25px;
 	}
 
 	&__item {
@@ -434,11 +434,12 @@
 
 	&__group {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: space-between;
 	}
 
 	&__checkbox {
+		margin-right: 45px;
 	}
 
 	&__btn {

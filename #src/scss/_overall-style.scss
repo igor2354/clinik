@@ -68,6 +68,10 @@ a {
 		box-shadow: 0 5px 9px 0 #bde1ef;
 		transform: translateY(-4px);
 	}
+
+	&.--small {
+		padding: 13px 30px;
+	}
 }
 
 .title-h1,
@@ -266,8 +270,23 @@ h3 {
 	&.--fz16 {
 		& .nice-select .current {
 			font-size: 16px;
-			line-height: 140%;
+			line-height: 120%;
 			font-weight: 400;
+		}
+	}
+
+	&.--small {
+		& input,
+		& textarea {
+			padding: 12px 20px 9px 20px;
+		}
+
+		& .nice-select {
+			min-height: 50px;
+		}
+
+		& .wrap-input__info {
+			padding: 10px 20px 8px 20px;
 		}
 	}
 }
