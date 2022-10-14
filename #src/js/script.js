@@ -62,34 +62,42 @@ document.addEventListener("DOMContentLoaded", function () {
 			lang: "ru-RU",
 			highlightedDays: ["2022-10-15"],
 			setup: (picker) => {
-				picker.on("render:day", (ui) => {
+				picker.on("render", (ui) => {
 					console.log(12312331231);
-					sizeDate(ui);
+					// sizeDate(ui);
 				});
 
 				picker.on("selected", (date1, date2) => {});
 			},
 		});
 
-		function sizeDate(el) {
-			let daysCalendar = el.querySelectorAll(".container__days > div");
+		// function sizeDate(el) {
+		// 	let daysCalendar = el.querySelectorAll(".container__days > div");
 
-			if (daysCalendar.length > 0) {
-				daysCalendar.forEach((element, index, array) => {
-					element.style.height = Math.ceil(array[0].offsetWidth) + "px";
-				});
-			}
+		// 	if (daysCalendar.length > 0) {
+		// 		daysCalendar.forEach((element, index, array) => {
+		// 			element.style.height = Math.ceil(array[0].offsetWidth) + "px";
+		// 		});
+		// 	}
 
-			window.addEventListener("resize", function () {
-				if (daysCalendar.length > 0) {
-					daysCalendar.forEach((element, index, array) => {
-						element.style.height = Math.ceil(array[0].offsetWidth) + "px";
-					});
-				}
-			});
-		}
+		// 	window.addEventListener("resize", function () {
+		// 		if (daysCalendar.length > 0) {
+		// 			daysCalendar.forEach((element, index, array) => {
+		// 				element.style.height = Math.ceil(array[0].offsetWidth) + "px";
+		// 			});
+		// 		}
+		// 	});
+		// }
 
-		sizeDate(datePic);
+		// sizeDate(datePic);
+	}
+
+	let allSelecet = document.querySelectorAll("select");
+
+	if (allSelecet.length > 0) {
+		allSelecet.forEach((element) => {
+			NiceSelect.bind(element);
+		});
 	}
 
 	// Открытие попапов МОЖНО УДАЛЯТЬ

@@ -214,3 +214,110 @@ h3 {
 		}
 	}
 }
+
+.wrap-input {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&__name {
+		flex-grow: 1;
+		margin-right: 20px;
+		color: #919291;
+	}
+
+	&__info {
+		max-width: 400px;
+		width: 100%;
+		padding: 13px 20px 16px 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border: 1px solid #e1e1e1;
+		border-radius: 30px;
+	}
+
+	&__text {
+		font-weight: 350;
+		font-size: 18px;
+		line-height: 150%;
+		color: #2f2f2f;
+	}
+
+	&__icon-calendar {
+		cursor: pointer;
+		& svg {
+			vertical-align: middle;
+		}
+	}
+
+	& input,
+	& textarea {
+		max-width: 400px;
+		width: 100%;
+		padding: 14px 20px 17px 20px;
+		font-weight: 350;
+		font-size: 18px;
+		line-height: 150%;
+		color: #2f2f2f;
+		border: 1px solid #e1e1e1;
+		border-radius: 30px;
+	}
+
+	&.--fz16 {
+		& .nice-select .current {
+			font-size: 16px;
+			line-height: 140%;
+			font-weight: 400;
+		}
+	}
+}
+
+.checkbox {
+	cursor: pointer;
+	& input {
+		display: none;
+		&:checked + .checkbox__checkmarck {
+			background: #8eaeba;
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__checkmarck {
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		border: 1px solid #8eaeba;
+		border-radius: 5px;
+		transition: all 0.3s ease;
+		&::before {
+			opacity: 0;
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 16px;
+			height: 12px;
+			background: url("../img/icon-check.svg") no-repeat center / contain;
+			transition: all 0.3s ease;
+		}
+	}
+
+	&__text {
+		padding-left: 45px;
+		font-weight: 350;
+		font-size: 18px;
+		line-height: 140%;
+		color: #919291;
+		& a {
+			color: #8eaeba;
+			border-bottom: 1px solid transparent;
+			transition: all 0.3s ease;
+			&:hover {
+				border-color: #8eaeba;
+			}
+		}
+	}
+}
