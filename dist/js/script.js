@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
 			nextEl: ".main-screen .slider-arrow-next",
 			prevEl: ".main-screen .slider-arrow-prev",
 		},
+		pagination: {
+			el: ".slider-pagination",
+			type: "fraction",
+		},
 	});
 
 	let sliderInfo = new Swiper(".info-slider", {
@@ -27,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		watchOverflow: true,
 		watchSlidesProgress: true,
 		navigation: {
-			nextEl: ".doctors-popup__slider .slider-arrow-two-next",
-			prevEl: ".doctors-popup__slider .slider-arrow-two-prev",
+			nextEl: ".doctors-popup__slider .slider-arrow-next",
+			prevEl: ".doctors-popup__slider .slider-arrow-prev",
 		},
 	});
 

@@ -1,6 +1,27 @@
 .main-screen {
 	margin-top: -144px;
 	&__wrap {
+		position: relative;
+	}
+
+	&__control {
+		position: absolute;
+		bottom: 60px;
+		width: 100%;
+		z-index: 5;
+	}
+
+	&__control-wrap {
+		display: flex;
+		align-items: center;
+	}
+
+	&__arrow {
+		display: flex;
+		margin-right: 20px;
+		& .slider-arrow-prev {
+			margin-right: 20px;
+		}
 	}
 }
 
@@ -13,7 +34,7 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		padding-top: 214px;
+		padding-top: 144px;
 		z-index: 2;
 	}
 
@@ -53,7 +74,8 @@
 
 	&__group {
 		max-width: 560px;
-		padding-bottom: 20px;
+		padding-bottom: 200px;
+		padding-top: 190px;
 	}
 
 	&__title {
