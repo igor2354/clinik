@@ -53,44 +53,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
-	let datePic = document.querySelector(".calendar-doctor");
-
-	if (datePic != null) {
-		const picker = new Litepicker({
-			element: datePic,
-			inlineMode: true,
-			lang: "ru-RU",
-			highlightedDays: ["2022-10-15"],
-			setup: (picker) => {
-				picker.on("render", (ui) => {
-					console.log(12312331231);
-					// sizeDate(ui);
-				});
-
-				picker.on("selected", (date1, date2) => {});
+	Inputmask({
+		mask: "+7 (Z99) 999-99-99",
+		definitions: {
+			Z: {
+				validator: "[0-6,9]",
 			},
-		});
-
-		// function sizeDate(el) {
-		// 	let daysCalendar = el.querySelectorAll(".container__days > div");
-
-		// 	if (daysCalendar.length > 0) {
-		// 		daysCalendar.forEach((element, index, array) => {
-		// 			element.style.height = Math.ceil(array[0].offsetWidth) + "px";
-		// 		});
-		// 	}
-
-		// 	window.addEventListener("resize", function () {
-		// 		if (daysCalendar.length > 0) {
-		// 			daysCalendar.forEach((element, index, array) => {
-		// 				element.style.height = Math.ceil(array[0].offsetWidth) + "px";
-		// 			});
-		// 		}
-		// 	});
-		// }
-
-		// sizeDate(datePic);
-	}
+		},
+	}).mask('[type="tel"]');
 
 	let allSelecet = document.querySelectorAll("select");
 
@@ -100,6 +70,72 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
+	let datePic = document.querySelector(".calendar-doctor");
+	let dataTime = {
+		1666213200000: ["15:00", "16:00"],
+		1666386000000: ["13:00", "17:00"],
+	};
+	let picker;
+
+	if (datePic != null) {
+		picker = new Litepicker({
+			element: datePic,
+			inlineMode: true,
+			lang: "ru-RU",
+			highlightedDays: Object.keys(dataTime),
+			setup: (picker) => {
+				picker.on("render", (ui) => {});
+
+				picker.on("selected", (date1) => {
+					let timeList = document.querySelector(".js-list-time");
+					let tip = document.querySelector(".js-tip");
+					if (dataTime[Date.parse(date1.dateInstance)] != undefined) {
+						timeList.classList.add("active");
+						tip.classList.remove("active");
+					} else {
+						timeList.classList.remove("active");
+						tip.classList.add("active");
+					}
+				});
+			},
+		});
+	}
+});
+
+document.addEventListener("click", function (e) {
+	let element = e.target;
+
+	if (element.closest(".js-add-doctor")) {
+		e.preventDefault();
+		let modal = element.closest(".modal");
+
+		modal.classList.remove("--step-1");
+		modal.classList.add("--step-2");
+
+		modal.querySelector(".js-step-1").classList.remove("active");
+		modal.querySelector(".js-step-2").classList.add("active");
+	}
+
+	if (element.closest(".js-time")) {
+		let parentOrder = element.closest(".order-doctor");
+		let timeDoctors = parentOrder.querySelector(".time-doctors");
+		let resultDoctors = parentOrder.querySelector(".result-doctors");
+
+		timeDoctors.classList.remove("active");
+		resultDoctors.classList.add("active");
+	}
+
+	if (element.closest(".js-back")) {
+		let parentOrder = element.closest(".order-doctor");
+		let timeDoctors = parentOrder.querySelector(".time-doctors");
+		let resultDoctors = parentOrder.querySelector(".result-doctors");
+
+		timeDoctors.classList.add("active");
+		resultDoctors.classList.remove("active");
+	}
+});
+
+document.addEventListener("DOMContentLoaded", function () {
 	// Открытие попапов МОЖНО УДАЛЯТЬ
 	let popupAllElem = Array.prototype.slice.call(document.querySelectorAll(".modal"));
 	let openButton = Array.prototype.slice.call(document.querySelectorAll(".js-modal-show"));

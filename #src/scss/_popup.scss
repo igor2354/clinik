@@ -106,6 +106,13 @@
 
 	&__card {
 	}
+
+	&__step {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
 }
 
 .card-doctors-popup {
@@ -240,6 +247,15 @@
 	}
 }
 
+.order-doctor {
+	&__step {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}
+
 .time-doctors {
 	padding: 30px;
 	&__row {
@@ -348,10 +364,13 @@
 
 	&__list-time {
 		max-width: 260px;
-		display: grid;
+		display: none;
 		grid-template-columns: 1fr 1fr 1fr;
 		column-gap: 10px;
 		row-gap: 20px;
+		&.active {
+			display: grid;
+		}
 	}
 
 	&__item-time {
@@ -371,10 +390,13 @@
 
 	&__tip {
 		padding-top: 50px;
-		display: flex;
+		display: none;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
+		&.active {
+			display: flex;
+		}
 	}
 
 	&__text {

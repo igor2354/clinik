@@ -353,7 +353,7 @@
   </div>
 </footer>
 
-<div class="popup-general modal .--step-1 --step-2" id="popup-order">
+<div class="popup-general modal --step-1" id="popup-order">
 
   <div class="popup-general__center">
 
@@ -371,7 +371,7 @@
 
           <div class="popup-general__doctors doctors-popup">
 
-            <!-- <div class="doctors-popup__step-1">
+            <div class="doctors-popup__step active js-step-1">
 
               <div class="doctors-popup__slider swiper">
                 <div class="doctors-popup__arrows">
@@ -407,7 +407,7 @@
 
                         <div class="card-doctors-popup__price">Прием от 3 000 ₽</div>
 
-                        <a href="#" class="card-doctors-popup__btn main-btn">Выбрать</a>
+                        <a href="#" class="card-doctors-popup__btn main-btn js-add-doctor">Выбрать</a>
                       </div>
                     </div>
                   </div>
@@ -427,7 +427,7 @@
 
                         <div class="card-doctors-popup__price">Прием от 3 000 ₽</div>
 
-                        <a href="#" class="card-doctors-popup__btn main-btn">Выбрать</a>
+                        <a href="#" class="card-doctors-popup__btn main-btn js-add-doctor">Выбрать</a>
                       </div>
                     </div>
                   </div>
@@ -447,7 +447,7 @@
 
                         <div class="card-doctors-popup__price">Прием от 3 000 ₽</div>
 
-                        <a href="#" class="card-doctors-popup__btn main-btn">Выбрать</a>
+                        <a href="#" class="card-doctors-popup__btn main-btn js-add-doctor">Выбрать</a>
                       </div>
                     </div>
                   </div>
@@ -456,9 +456,9 @@
                 </div>
               </div>
 
-            </div> -->
+            </div>
 
-            <div class="doctors-popup__step-2">
+            <div class="doctors-popup__step js-step-2">
               <div class="doctors-popup__info info-doctors-popup">
                 <div class="info-doctors-popup__wrap">
                   <div class="info-doctors-popup__avatar">
@@ -482,121 +482,122 @@
                 </div>
               </div>
 
-              <!-- <div class="doctors-popup__time time-doctors">
-                <div class="time-doctors__row">
-                  <div class="time-doctors__column">
-                    <div class="time-doctors__calendar calendar-doctor">
+              <div class="doctors-popup__order order-doctor">
+                <div class="order-doctor__step time-doctors active">
+                  <div class="time-doctors__row">
+                    <div class="time-doctors__column">
+                      <div class="time-doctors__calendar calendar-doctor">
 
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="time-doctors__column">
-                    <div class="time-doctors__clock clock-doctors">
-                      <div class="clock-doctors__top">
+                    <div class="time-doctors__column">
+                      <div class="time-doctors__clock clock-doctors">
+                        <div class="clock-doctors__top">
 
-                        <div class="clock-doctors__list-time">
-                          <div class="clock-doctors__item-time">14:00</div>
-                          <div class="clock-doctors__item-time">15:00</div>
-                          <div class="clock-doctors__item-time">16:00</div>
-                          <div class="clock-doctors__item-time">17:00</div>
-                          <div class="clock-doctors__item-time">18:00</div>
-                        </div>
-
-                        <div class="clock-doctors__tip">
-                          <div class="clock-doctors__text">
-                            Ближайшая запись к специалисту:
+                          <div class="clock-doctors__list-time js-list-time">
+                            <div class="clock-doctors__item-time js-time">14:00</div>
+                            <div class="clock-doctors__item-time js-time">15:00</div>
+                            <div class="clock-doctors__item-time js-time">16:00</div>
+                            <div class="clock-doctors__item-time js-time">17:00</div>
+                            <div class="clock-doctors__item-time js-time">18:00</div>
                           </div>
 
-                          <div class="clock-doctors__link">
-                            понедельник, 26 сентября
+                          <div class="clock-doctors__tip js-tip active">
+                            <div class="clock-doctors__text">
+                              Ближайшая запись к специалисту:
+                            </div>
+
+                            <div class="clock-doctors__link">
+                              понедельник, 26 сентября
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="clock-doctors__bottom">
+                          <div class="clock-doctors__adress">
+                            Санкт-Петербург – Клиника, Наличная улица, 40к1
                           </div>
                         </div>
-
-
                       </div>
+                    </div>
+                  </div>
+                </div>
 
-                      <div class="clock-doctors__bottom">
-                        <div class="clock-doctors__adress">
-                          Санкт-Петербург – Клиника, Наличная улица, 40к1
+                <div class="order-doctor__step result-doctors">
+                  <div class="result-doctors__list">
+                    <div class="result-doctors__item wrap-input --fz16 --small">
+                      <div class="wrap-input__name">Услуга</div>
+
+                      <select>
+                        <option selected value="Прием (осмотр, консультация) врача-остеопата повторный">Прием (осмотр,
+                          консультация) врача-остеопата повторный</option>
+                        <option selected value="Остеопатия при заболеваниях центральной нервной системы">Остеопатия при
+                          заболеваниях центральной нервной системы</option>
+                      </select>
+                    </div>
+
+
+                    <div class="result-doctors__item wrap-input --small">
+                      <div class="wrap-input__name">Дата и время приема</div>
+
+                      <div class="wrap-input__info">
+                        <div class="wrap-input__text">26 сентября, 16:00</div>
+
+                        <div class="wrap-input__icon-calendar js-back">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                              d="M3.75 8.375C3.75 6.16586 5.54086 4.375 7.75 4.375H22.25C24.4591 4.375 26.25 6.16586 26.25 8.375V23.5C26.25 25.7091 24.4591 27.5 22.25 27.5H7.75C5.54086 27.5 3.75 25.7091 3.75 23.5V8.375Z"
+                              stroke="#8EAEBA" stroke-width="1.5" />
+                            <path d="M3.75 11.25H26.25" stroke="#8EAEBA" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M10 2.5L10 6.25" stroke="#8EAEBA" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path d="M20 2.5V6.25" stroke="#8EAEBA" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <circle cx="15" cy="18.75" r="1.25" fill="#8EAEBA" />
+                            <circle cx="20" cy="18.75" r="1.25" fill="#8EAEBA" />
+                            <circle cx="10" cy="18.75" r="1.25" fill="#8EAEBA" />
+                          </svg>
                         </div>
                       </div>
                     </div>
+
+                    <div class="result-doctors__item wrap-input --small">
+                      <div class="wrap-input__name">Вы впервые у доктора?</div>
+
+                      <select>
+                        <option selected value="Первый приём">Первый приём</option>
+                        <option value="Второй приём">Второй приём</option>
+                      </select>
+                    </div>
+
+                    <div class="result-doctors__item wrap-input --small">
+                      <div class="wrap-input__name">Номер телефона</div>
+
+                      <input type="tel">
+                    </div>
+
+                    <div class="result-doctors__item wrap-input --small">
+                      <div class="wrap-input__name">ФИО пациента</div>
+
+                      <input type="text">
+                    </div>
                   </div>
-                </div>
-              </div> -->
 
-              <div class="doctors-popup__result result-doctors">
-                <div class="result-doctors__list">
-                  <div class="result-doctors__item wrap-input --fz16 --small">
-                    <div class="wrap-input__name">Услуга</div>
-
-                    <select>
-                      <option selected value="Прием (осмотр, консультация) врача-остеопата повторный">Прием (осмотр,
-                        консультация) врача-остеопата повторный</option>
-                      <option selected value="Остеопатия при заболеваниях центральной нервной системы">Остеопатия при
-                        заболеваниях центральной нервной системы</option>
-                    </select>
-                  </div>
-
-
-                  <div class="result-doctors__item wrap-input --small">
-                    <div class="wrap-input__name">Дата и время приема</div>
-
-                    <div class="wrap-input__info">
-                      <div class="wrap-input__text">26 сентября, 16:00</div>
-
-                      <div class="wrap-input__icon-calendar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                          <path
-                            d="M3.75 8.375C3.75 6.16586 5.54086 4.375 7.75 4.375H22.25C24.4591 4.375 26.25 6.16586 26.25 8.375V23.5C26.25 25.7091 24.4591 27.5 22.25 27.5H7.75C5.54086 27.5 3.75 25.7091 3.75 23.5V8.375Z"
-                            stroke="#8EAEBA" stroke-width="1.5" />
-                          <path d="M3.75 11.25H26.25" stroke="#8EAEBA" stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M10 2.5L10 6.25" stroke="#8EAEBA" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path d="M20 2.5V6.25" stroke="#8EAEBA" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <circle cx="15" cy="18.75" r="1.25" fill="#8EAEBA" />
-                          <circle cx="20" cy="18.75" r="1.25" fill="#8EAEBA" />
-                          <circle cx="10" cy="18.75" r="1.25" fill="#8EAEBA" />
-                        </svg>
+                  <div class="result-doctors__group">
+                    <label class="result-doctors__checkbox checkbox">
+                      <input type="checkbox" checked>
+                      <div class="checkbox__checkmarck"></div>
+                      <div class="checkbox__text">
+                        Я согласен с <a href="#">условиями обработки персональных данных</a>
                       </div>
-                    </div>
+                    </label>
+
+                    <a href="#" class="result-doctors__btn main-btn --small">Записаться</a>
                   </div>
 
-                  <div class="result-doctors__item wrap-input --small">
-                    <div class="wrap-input__name">Вы впервые у доктора?</div>
-
-                    <select>
-                      <option selected value="Первый приём">Первый приём</option>
-                      <option value="Второй приём">Второй приём</option>
-                    </select>
-                  </div>
-
-                  <div class="result-doctors__item wrap-input --small">
-                    <div class="wrap-input__name">Номер телефона</div>
-
-                    <input type="text">
-                  </div>
-
-                  <div class="result-doctors__item wrap-input --small">
-                    <div class="wrap-input__name">ФИО пациента</div>
-
-                    <input type="tel">
-                  </div>
                 </div>
-
-                <div class="result-doctors__group">
-                  <label class="result-doctors__checkbox checkbox">
-                    <input type="checkbox" checked>
-                    <div class="checkbox__checkmarck"></div>
-                    <div class="checkbox__text">
-                      Я согласен с <a href="#">условиями обработки персональных данных</a>
-                    </div>
-                  </label>
-
-                  <a href="#" class="result-doctors__btn main-btn --small">Записаться</a>
-                </div>
-
               </div>
             </div>
 
@@ -623,6 +624,7 @@
 <script src="./js/swiper-bundle-8.1.5.js"></script>
 <script src="./js/litepicker.js"></script>
 <script src="./js/nice-select2.js"></script>
+<script src="./js/inputmask.js"></script>
 <script src="./js/script.js"></script>
 </body>
 
