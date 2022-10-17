@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			prevEl: ".main-screen .slider-arrow-prev",
 		},
 		pagination: {
-			el: ".slider-pagination",
+			el: ".main-screen .slider-pagination",
 			type: "fraction",
 		},
 	});
@@ -23,6 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		navigation: {
 			nextEl: ".slider-info .slider-arrow-next",
 			prevEl: ".slider-info .slider-arrow-prev",
+		},
+		pagination: {
+			el: ".slider-info .slider-pagination",
+			type: "fraction",
 		},
 	});
 

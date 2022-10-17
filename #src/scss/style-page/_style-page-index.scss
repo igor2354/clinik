@@ -284,6 +284,26 @@
 
 	&__container {
 	}
+
+	&__control {
+		position: absolute;
+		bottom: 30px;
+		width: 100%;
+		z-index: 5;
+	}
+
+	&__control-wrap {
+		display: flex;
+		align-items: center;
+	}
+
+	&__arrow {
+		display: flex;
+		margin-right: 20px;
+		& .slider-arrow-prev {
+			margin-right: 20px;
+		}
+	}
 }
 
 .info-slider {
@@ -296,7 +316,7 @@
 	&__column {
 		&:first-child {
 			margin-right: 20px;
-			padding: 100px 0;
+			padding: 100px 0 150px 0;
 			max-width: 640px;
 		}
 		&:last-child {

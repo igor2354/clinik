@@ -757,6 +757,25 @@ h3 {
   position: relative;
   overflow: hidden;
   background: #f5f5f5; }
+  .slider-info__control {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    z-index: 5; }
+  .slider-info__control-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .slider-info__arrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 20px; }
+    .slider-info__arrow .slider-arrow-prev {
+      margin-right: 20px; }
 
 .info-slider__row {
   position: relative;
@@ -769,7 +788,7 @@ h3 {
 
 .info-slider__column:first-child {
   margin-right: 20px;
-  padding: 100px 0;
+  padding: 100px 0 150px 0;
   max-width: 640px; }
 
 .info-slider__column:last-child {
