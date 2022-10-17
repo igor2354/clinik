@@ -66,3 +66,25 @@
 		}
 	}
 }
+
+@media (max-width: 1270px) {
+	.main-nav {
+		&__item {
+			margin-right: 30px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__link {
+			font-size: 14px;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.main-nav {
+		display: none;
+	}
+}
