@@ -78,6 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
+	const da = new DynamicAdapt("max");
+	da.init();
+
 	let datePic = document.querySelector(".calendar-doctor");
 	let dataTime = {
 		1666213200000: ["15:00", "16:00"],
