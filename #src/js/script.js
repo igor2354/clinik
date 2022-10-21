@@ -40,6 +40,33 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 	});
 
+	function bodyLock(lock) {
+		let body = document.querySelector("body");
+		if (body != null) {
+			if (lock) {
+				body.classList.add("lock");
+			} else {
+				body.classList.remove("lock");
+			}
+		}
+	}
+
+	let burger = document.querySelector(".js-burger");
+	let mobMenu = document.querySelector(".mob-menu");
+	let closeMenu = document.querySelector(".js-close-menu");
+
+	if (burger != null && mobMenu != null && closeMenu != null) {
+		burger.addEventListener("click", function () {
+			mobMenu.classList.add("active");
+			bodyLock(true);
+		});
+
+		closeMenu.addEventListener("click", function () {
+			mobMenu.classList.remove("active");
+			bodyLock(false);
+		});
+	}
+
 	let arrInputPlaceholder = Array.prototype.slice.call(document.querySelectorAll(".js-placeholder"));
 
 	if (arrInputPlaceholder.length > 0) {

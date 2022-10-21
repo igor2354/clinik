@@ -26,6 +26,9 @@
 		&:hover {
 			color: var(--sub-color-text);
 		}
+		&.current {
+			color: var(--sub-color-text);
+		}
 	}
 
 	&__submenu {
