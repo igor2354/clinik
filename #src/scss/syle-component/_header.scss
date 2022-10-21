@@ -158,6 +158,11 @@
 		transform: translate(0, 0);
 	}
 
+	&__wrap {
+		overflow: auto;
+		max-height: 100vh;
+	}
+
 	&__top {
 		display: flex;
 		justify-content: flex-end;
@@ -231,28 +236,35 @@
 @media (max-width: 630px) {
 	.mob-menu {
 		&__top {
-			padding: 15px 20px;
+			padding: 10px 20px;
+		}
+
+		&__close {
+			& svg {
+				width: 45px;
+				height: 45px;
+			}
 		}
 
 		&__middle {
-			padding: 55px 20px;
+			padding: 25px 20px;
 		}
 
 		&__bottom {
-			padding: 30px 20px 60px 20px;
+			padding: 25px 20px 30px 20px;
 		}
 
 		&__item {
 			&:not(:last-child) {
-				margin-bottom: 20px;
+				margin-bottom: 15px;
 			}
 			& a {
-				font-size: 36px;
+				font-size: 28px;
 			}
 		}
 
 		&__link {
-			font-size: 24px;
+			font-size: 20px;
 		}
 
 		&__social-link {
