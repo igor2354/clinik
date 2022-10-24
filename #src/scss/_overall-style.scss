@@ -334,12 +334,12 @@ h3 {
 }
 
 .wrap-input {
-	display: flex;
+	display: grid;
+	grid-template-columns: 0.8fr 1fr;
 	align-items: center;
-	justify-content: space-between;
+	gap: 20px;
 	&__name {
 		flex-grow: 1;
-		margin-right: 20px;
 		color: #919291;
 	}
 
@@ -405,6 +405,56 @@ h3 {
 	}
 }
 
+@media (max-width: 1000px) {
+	.wrap-input {
+		grid-template-columns: 0.6fr 1fr;
+
+		&__text {
+			font-size: 16px;
+		}
+
+		& input,
+		& textarea {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (max-width: 630px) {
+	.wrap-input {
+		grid-template-columns: 1fr;
+		gap: 5px;
+
+		&__text {
+			font-size: 12px;
+		}
+
+		& input,
+		& textarea {
+			font-size: 12px;
+		}
+
+		&.--fz16 {
+			& .nice-select .current {
+				font-size: 12px;
+			}
+		}
+
+		& .nice-select {
+			font-size: 12px;
+		}
+
+		&.--small .nice-select {
+			min-height: 40px;
+		}
+
+		&__icon-calendar svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+
 .checkbox {
 	cursor: pointer;
 	& input {
@@ -451,6 +501,33 @@ h3 {
 			&:hover {
 				border-color: #8eaeba;
 			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.checkbox {
+		&__text {
+			padding-left: 40px;
+			font-size: 14px;
+		}
+	}
+}
+
+@media (max-width: 630px) {
+	.checkbox {
+		&__checkmarck {
+			width: 20px;
+			height: 20px;
+			&::before {
+				width: 8px;
+				height: 6px;
+			}
+		}
+
+		&__text {
+			padding-left: 25px;
+			font-size: 12px;
 		}
 	}
 }

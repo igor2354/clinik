@@ -31,12 +31,25 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	let sliderDoctorsPopup = new Swiper(".doctors-popup__slider", {
-		slidesPerView: "auto",
+		slidesPerView: 1,
+		spaceBetween: 30,
 		watchOverflow: true,
 		watchSlidesProgress: true,
 		navigation: {
 			nextEl: ".doctors-popup__slider .slider-arrow-next",
 			prevEl: ".doctors-popup__slider .slider-arrow-prev",
+		},
+
+		breakpoints: {
+			1000: {
+				slidesPerView: "auto",
+				spaceBetween: 0,
+			},
+
+			630: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+			},
 		},
 	});
 

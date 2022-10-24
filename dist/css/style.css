@@ -399,20 +399,16 @@ h3 {
       color: #919291; }
 
 .wrap-input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  gap: 20px; }
   .wrap-input__name {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    margin-right: 20px;
     color: #919291; }
   .wrap-input__info {
     max-width: 400px;
@@ -461,6 +457,34 @@ h3 {
   .wrap-input.--small .wrap-input__info {
     padding: 10px 20px 8px 20px; }
 
+@media (max-width: 1000px) {
+  .wrap-input {
+    grid-template-columns: 0.6fr 1fr; }
+    .wrap-input__text {
+      font-size: 16px; }
+    .wrap-input input,
+    .wrap-input textarea {
+      font-size: 16px; } }
+
+@media (max-width: 630px) {
+  .wrap-input {
+    grid-template-columns: 1fr;
+    gap: 5px; }
+    .wrap-input__text {
+      font-size: 12px; }
+    .wrap-input input,
+    .wrap-input textarea {
+      font-size: 12px; }
+    .wrap-input.--fz16 .nice-select .current {
+      font-size: 12px; }
+    .wrap-input .nice-select {
+      font-size: 12px; }
+    .wrap-input.--small .nice-select {
+      min-height: 40px; }
+    .wrap-input__icon-calendar svg {
+      width: 20px;
+      height: 20px; } }
+
 .checkbox {
   cursor: pointer; }
   .checkbox input {
@@ -507,6 +531,22 @@ h3 {
       transition: all 0.3s ease; }
       .checkbox__text a:hover {
         border-color: #8eaeba; }
+
+@media (max-width: 1000px) {
+  .checkbox__text {
+    padding-left: 40px;
+    font-size: 14px; } }
+
+@media (max-width: 630px) {
+  .checkbox__checkmarck {
+    width: 20px;
+    height: 20px; }
+    .checkbox__checkmarck::before {
+      width: 8px;
+      height: 6px; }
+  .checkbox__text {
+    padding-left: 25px;
+    font-size: 12px; } }
 
 .header {
   position: fixed;
@@ -2018,18 +2058,6 @@ h3 {
     font-weight: 400;
     margin-bottom: 20px; }
 
-@media (max-width: 768px) {
-  .popup-general__group-title {
-    padding: 16px 56px 16px 24px; }
-  .popup-general__body {
-    padding-bottom: 24px; }
-  .popup-general__title {
-    text-align: left; }
-  .popup-general__close {
-    right: 16px; }
-  .popup-general__wrap {
-    padding: 32px 24px; } }
-
 .info-doctors-popup {
   position: relative;
   padding: 15px 30px;
@@ -2247,6 +2275,155 @@ h3 {
   .result-doctors__btn {
     width: 100%;
     max-width: 400px; }
+
+@media (max-width: 1000px) {
+  .popup-general__scroll {
+    max-width: 590px; }
+  .popup-general__close {
+    width: 22px;
+    height: 22px; }
+  .popup-general__group-title {
+    padding: 20px; }
+  .doctors-popup__slider {
+    padding: 20px 0;
+    margin: 0 20px; }
+  .card-doctors-popup {
+    padding: 0; }
+    .card-doctors-popup__wrap {
+      padding: 20px; }
+    .card-doctors-popup__avatar {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px; }
+    .card-doctors-popup__name {
+      font-size: 18px;
+      margin-bottom: 10px; }
+    .card-doctors-popup__text {
+      font-size: 14px; }
+  .info-doctors-popup__avatar {
+    width: 120px;
+    height: 120px;
+    margin-right: 30px; }
+  .info-doctors-popup__name {
+    font-size: 18px;
+    margin-bottom: 10px; }
+  .info-doctors-popup__text {
+    font-size: 14px; }
+  .info-doctors-popup__call-text {
+    font-size: 14px;
+    margin-bottom: 10px; }
+  .time-doctors {
+    padding: 30px 15px; }
+    .time-doctors__column:first-child {
+      padding-right: 20px; }
+    .time-doctors__column:last-child {
+      padding-left: 20px; }
+    .time-doctors__calendar .litepicker .container__months .month-item-header div > .month-item-name {
+      font-size: 18px; }
+    .time-doctors__calendar .litepicker .container__months .month-item-weekdays-row > div {
+      font-size: 14px; }
+    .time-doctors__calendar .litepicker .container__days .day-item {
+      font-size: 14px; }
+    .time-doctors__calendar .litepicker .container__days .day-item::before {
+      padding-top: calc(50% - 0.85em); }
+    .time-doctors__calendar .litepicker .container__days .day-item::after {
+      padding-bottom: calc(50% - 0.85em); }
+  .clock-doctors__list-time {
+    max-width: 200px;
+    row-gap: 10px; }
+  .clock-doctors__item-time {
+    padding: 6px 8px 5px 8px;
+    font-size: 14px; }
+  .result-doctors__checkbox {
+    max-width: 180px;
+    margin-right: 20px; } }
+
+@media (max-width: 630px) {
+  .popup-general__close {
+    position: static;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    width: 15px;
+    height: 15px; }
+  .popup-general__group-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 20px; }
+  .doctors-popup__slider .swiper-slide {
+    max-width: initial; }
+  .doctors-popup__slider .slider-arrow-prev,
+  .doctors-popup__slider .slider-arrow-next {
+    width: 30px;
+    height: 30px; }
+    .doctors-popup__slider .slider-arrow-prev svg,
+    .doctors-popup__slider .slider-arrow-next svg {
+      width: 20px;
+      height: 20px; }
+  .doctors-popup__arrows {
+    margin-bottom: 15px; }
+    .doctors-popup__arrows .slider-arrow-prev {
+      margin-right: 10px; }
+  .card-doctors-popup__avatar {
+    width: 60px;
+    height: 60px; }
+  .card-doctors-popup__name {
+    font-size: 16px; }
+  .card-doctors-popup__text {
+    font-size: 12px; }
+  .info-doctors-popup {
+    padding: 15px 20px; }
+    .info-doctors-popup__avatar {
+      width: 60px;
+      height: 60px;
+      margin-right: 20px; }
+    .info-doctors-popup__name {
+      font-size: 14px; }
+    .info-doctors-popup__text {
+      font-size: 12px; }
+    .info-doctors-popup__call-text {
+      font-size: 12px; }
+    .info-doctors-popup__phone {
+      font-size: 16px; }
+  .time-doctors {
+    padding: 20px 15px; }
+    .time-doctors__row {
+      grid-template-columns: 1fr; }
+    .time-doctors__column:first-child {
+      padding-right: 0px;
+      padding-bottom: 20px;
+      border-right: none;
+      border-bottom: 1px solid #919291; }
+    .time-doctors__column:last-child {
+      padding-top: 20px;
+      padding-left: 0px; }
+  .clock-doctors {
+    padding: 0; }
+    .clock-doctors__tip {
+      padding-top: 0;
+      margin-bottom: 30px; }
+    .clock-doctors__link {
+      font-size: 12px; }
+    .clock-doctors__list-time {
+      margin-bottom: 30px; }
+  .result-doctors {
+    padding: 20px; }
+    .result-doctors__group {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .result-doctors__checkbox {
+      max-width: 215px;
+      margin-right: 0;
+      margin-bottom: 15px; } }
 
 .footer {
   background: #8eaeba; }
