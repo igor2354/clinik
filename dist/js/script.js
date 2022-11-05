@@ -53,6 +53,18 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 	});
 
+	let sliderOtherBlog = new Swiper(".blog-other .blog-other__slider", {
+		slidesPerView: 3,
+		initialSlide: 2,
+		spaceBetween: 60,
+		watchOverflow: true,
+		watchSlidesProgress: true,
+		navigation: {
+			nextEl: ".blog-other .slider-arrow-next",
+			prevEl: ".blog-other .slider-arrow-prev",
+		},
+	});
+
 	function bodyLock(lock) {
 		let body = document.querySelector("body");
 		if (body != null) {
@@ -149,6 +161,20 @@ document.addEventListener("DOMContentLoaded", function () {
 					}
 				});
 			},
+		});
+	}
+
+	let lightgalleryAll = document.querySelectorAll(".lightgallery");
+
+	if (lightgalleryAll.length > 0) {
+		lightgalleryAll.forEach((element) => {
+			lightGallery(element, {
+				selector: ".lg-target",
+				addClass: "lightGallery-white-theme",
+				exThumbImage: "data-external-thumb-image",
+				speed: 500,
+				plugins: [lgFullscreen, lgThumbnail],
+			});
 		});
 	}
 });

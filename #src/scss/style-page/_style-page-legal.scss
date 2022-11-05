@@ -1,0 +1,80 @@
+.legal {
+	background: #eef3f5;
+	&__wrap {
+		padding-bottom: 120px;
+	}
+
+	&__text {
+		font-size: 24px;
+		color: #2f2f2f;
+		line-height: 150%;
+		& a {
+			font-weight: 700;
+			color: #8eaeba;
+			border-bottom: 1px solid transparent;
+			transition: all 0.3s ease;
+			&:hover {
+				border-color: #8eaeba;
+			}
+		}
+		margin-bottom: 90px;
+	}
+
+	&__lsit {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 60px;
+		grid-auto-rows: 1fr;
+	}
+
+	&__item {
+	}
+}
+
+.card-legal {
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	background: #ffffff;
+	border-radius: 10px;
+	&__icon {
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		flex-grow: 1;
+		margin-bottom: 60px;
+		font-size: 18px;
+		line-height: 150%;
+	}
+
+	&__link {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 130%;
+		color: #8eaeba;
+		& span {
+			position: relative;
+			padding-right: 34px;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translate(0, -50%);
+				width: 24px;
+				height: 24px;
+				background: url("../img/icon-download.svg") no-repeat center / contain;
+				transition: all 0.3s ease;
+			}
+		}
+
+		&:hover {
+			& span {
+				&::before {
+					transform: translate(0, calc(-50% + 5px));
+				}
+			}
+		}
+	}
+}

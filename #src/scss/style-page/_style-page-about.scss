@@ -1,0 +1,15 @@
+.page-about {
+	&__wrap {
+		padding: 90px 0;
+	}
+
+	&__text {
+		& h2 {
+			&:not(:first-child) {
+				color: #8eaeba;
+				margin-top: 60px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+}

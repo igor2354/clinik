@@ -1,314 +1,428 @@
 <!DOCTYPE html>
 <html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/swiper-bundle-8.1.5.css" />
+		<link rel="stylesheet" href="./css/nice-select2.css" />
+		<link rel="stylesheet" href="./css/lightgallery-bundle.min.css" />
+		<link rel="stylesheet" href="./css/lg-thumbnail.css" />
+		<link rel="stylesheet" href="./css/lg-fullscreen.css" />
+		<link rel="stylesheet" href="./css/lg-transitions.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Document</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="./css/swiper-bundle-8.1.5.css" />
-	<link rel="stylesheet" href="./css/nice-select2.css" />
-	<link rel="stylesheet" href="./css/style.css" />
-	<title>Document</title>
-</head>
+	<body>
+		<div class="wrapper">
+			<!-- HEADER -->
 
-<body>
-	<div class="wrapper">
-		<!-- HEADER -->
+			<div class="mob-menu">
+				<div class="mob-menu__wrap">
+					<div class="mob-menu__top">
+						<div class="mob-menu__close js-close-menu">
+							<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+								<path d="M41.1371 19.9238C41.43 19.6309 41.43 19.156 41.1371 18.8631C40.8442 18.5702 40.3693 18.5702 40.0764 18.8631L41.1371 19.9238ZM18.8632 40.0763C18.5703 40.3692 18.5703 40.8441 18.8632 41.137C19.1561 41.4299 19.631 41.4299 19.9239 41.137L18.8632 40.0763ZM40.0764 41.1368C40.3693 41.4297 40.8442 41.4297 41.1371 41.1368C41.43 40.844 41.43 40.3691 41.1371 40.0762L40.0764 41.1368ZM19.9239 18.863C19.631 18.5701 19.1561 18.5701 18.8632 18.863C18.5703 19.1559 18.5703 19.6307 18.8632 19.9236L19.9239 18.863ZM40.0764 18.8631L18.8632 40.0763L19.9239 41.137L41.1371 19.9238L40.0764 18.8631ZM41.1371 40.0762L19.9239 18.863L18.8632 19.9236L40.0764 41.1368L41.1371 40.0762Z" fill="#919291" />
+							</svg>
+						</div>
+					</div>
 
-		<div class="mob-menu">
-			<div class="mob-menu__wrap">
-				<div class="mob-menu__top">
-					<div class="mob-menu__close js-close-menu">
-						<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-							<path
-								d="M41.1371 19.9238C41.43 19.6309 41.43 19.156 41.1371 18.8631C40.8442 18.5702 40.3693 18.5702 40.0764 18.8631L41.1371 19.9238ZM18.8632 40.0763C18.5703 40.3692 18.5703 40.8441 18.8632 41.137C19.1561 41.4299 19.631 41.4299 19.9239 41.137L18.8632 40.0763ZM40.0764 41.1368C40.3693 41.4297 40.8442 41.4297 41.1371 41.1368C41.43 40.844 41.43 40.3691 41.1371 40.0762L40.0764 41.1368ZM19.9239 18.863C19.631 18.5701 19.1561 18.5701 18.8632 18.863C18.5703 19.1559 18.5703 19.6307 18.8632 19.9236L19.9239 18.863ZM40.0764 18.8631L18.8632 40.0763L19.9239 41.137L41.1371 19.9238L40.0764 18.8631ZM41.1371 40.0762L19.9239 18.863L18.8632 19.9236L40.0764 41.1368L41.1371 40.0762Z"
-								fill="#919291" />
-						</svg>
+					<div class="mob-menu__middle">
+						<ul class="mob-menu__list">
+							<li class="mob-menu__item">
+								<a href="#">О клинике</a>
+							</li>
+
+							<li class="mob-menu__item">
+								<a href="#">Услуги</a>
+							</li>
+
+							<li class="mob-menu__item">
+								<a href="#">Врачи</a>
+							</li>
+
+							<li class="mob-menu__item">
+								<a href="#">Блог</a>
+							</li>
+
+							<li class="mob-menu__item">
+								<a href="#">Вакансии</a>
+							</li>
+
+							<li class="mob-menu__item">
+								<a href="#">Контакты</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="mob-menu__bottom">
+						<div class="mob-menu__group-link">
+							<a href="#" class="mob-menu__link">8 (812) 888-88-88</a>
+							<a href="#" class="mob-menu__link">info@miclinic.ru</a>
+						</div>
+
+						<div class="mob-menu__social">
+							<a href="#" class="mob-menu__social-link">
+								<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+									<g clip-path="url(#clip0_228_1090)">
+										<path d="M23.7225 0.00994141L25.545 0.00244141H34.455L36.28 0.00994141L38.565 0.0349414L39.6475 0.0524414L40.6925 0.0799414L41.7 0.114941L42.67 0.154941L43.605 0.207441L44.505 0.269941L45.3675 0.344941L46.2 0.427441C50.55 0.917441 53.5325 1.96744 55.7825 4.21744C58.0325 6.46744 59.0825 9.44744 59.5725 13.7999L59.6575 14.6324L59.73 15.4974L59.7925 16.3974L59.8425 17.3299L59.905 18.7999L59.935 19.8249L59.9675 21.4349L59.99 23.7224L60 26.1724L59.9975 34.4549L59.99 36.2799L59.965 38.5649L59.9475 39.6474L59.92 40.6924L59.885 41.6999L59.845 42.6699L59.7925 43.6049L59.73 44.5049L59.655 45.3674L59.5725 46.1999C59.0825 50.5499 58.0325 53.5324 55.7825 55.7824C53.5325 58.0324 50.5525 59.0824 46.2 59.5724L45.3675 59.6574L44.5025 59.7299L43.6025 59.7924L42.67 59.8424L41.2 59.9049L40.175 59.9349L38.565 59.9674L36.2775 59.9899L33.8275 59.9999L25.545 59.9974L23.72 59.9899L21.435 59.9649L20.3525 59.9474L19.3075 59.9199L18.3 59.8849L17.33 59.8449L16.395 59.7924L15.495 59.7299L14.6325 59.6549L13.8 59.5724C9.45 59.0824 6.4675 58.0324 4.2175 55.7824C1.9675 53.5324 0.9175 50.5524 0.4275 46.1999L0.3425 45.3674L0.27 44.5024L0.2075 43.6024L0.1575 42.6699L0.095 41.1999L0.065 40.1749L0.0325 38.5649L0.01 36.2774L0 33.8274L0.0025 25.5449L0.01 23.7199L0.035 21.4349L0.0525 20.3524L0.08 19.3074L0.115 18.2999L0.155 17.3299L0.2075 16.3949L0.27 15.4949L0.345 14.6324L0.4275 13.7999C0.9175 9.44994 1.9675 6.46744 4.2175 4.21744C6.4675 1.96744 9.4475 0.917441 13.8 0.427441L14.6325 0.342441L15.4975 0.269941L16.3975 0.207441L17.33 0.157441L18.8 0.0949414L19.825 0.0649414L21.435 0.0324414L23.7225 0.00994141ZM16.975 18.2499H10.125C10.45 33.8499 18.25 43.2249 31.925 43.2249H32.7V34.2999C37.725 34.7999 41.525 38.4749 43.05 43.2249H50.15C48.2 36.1249 43.075 32.1999 39.875 30.6999C43.075 28.8499 47.575 24.3499 48.65 18.2499H42.2C40.8 23.1999 36.65 27.6999 32.7 28.1249V18.2499H26.25V35.5499C22.25 34.5499 17.2 29.6999 16.975 18.2499Z" fill="#E1E1E1" />
+									</g>
+									<defs>
+										<clipPath id="clip0_228_1090">
+											<rect width="60" height="60" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+
+							<a href="#" class="mob-menu__social-link">
+								<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+									<g clip-path="url(#clip0_228_1092)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M60 30C60 46.5675 46.5675 60 30 60C13.4325 60 0 46.5675 0 30C0 13.4325 13.4325 0 30 0C46.5675 0 60 13.4325 60 30ZM31.075 22.1475C28.1575 23.36 22.325 25.8725 13.58 29.6825C12.16 30.2475 11.415 30.8 11.3475 31.34C11.2325 32.255 12.3775 32.615 13.9325 33.1025C14.145 33.17 14.365 33.2375 14.59 33.3125C16.1225 33.81 18.1825 34.3925 19.2525 34.415C20.225 34.435 21.31 34.035 22.5075 33.215C30.6775 27.6975 34.895 24.91 35.16 24.85C35.3475 24.8075 35.6075 24.7525 35.7825 24.91C35.9575 25.065 35.94 25.36 35.9225 25.44C35.8075 25.9225 31.3225 30.095 28.9975 32.255C28.2725 32.9275 27.76 33.405 27.655 33.515C27.42 33.7575 27.18 33.99 26.95 34.2125C25.525 35.5825 24.46 36.6125 27.01 38.2925C28.235 39.1 29.215 39.7675 30.1925 40.4325C31.26 41.16 32.325 41.885 33.705 42.79C34.055 43.02 34.39 43.2575 34.7175 43.49C35.96 44.3775 37.0775 45.1725 38.4575 45.0475C39.2575 44.9725 40.0875 44.22 40.5075 41.9725C41.5 36.6575 43.455 25.1475 43.9075 20.4025C43.935 20.0085 43.9183 19.6127 43.8575 19.2225C43.8211 18.9073 43.6677 18.6173 43.4275 18.41C43.07 18.1175 42.515 18.055 42.265 18.06C41.1375 18.08 39.4075 18.6825 31.075 22.1475Z" fill="#E1E1E1" />
+									</g>
+									<defs>
+										<clipPath id="clip0_228_1092">
+											<rect width="60" height="60" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+						</div>
 					</div>
 				</div>
+			</div>
 
-				<div class="mob-menu__middle">
-					<ul class="mob-menu__list">
-						<li class="mob-menu__item">
-							<a href="#">О клинике</a>
-						</li>
+			<header class="header">
+				<div class="container">
+					<div class="header__wrap">
+						<div class="header__logo-group">
+							<div class="header__burger js-burger">
+								<span></span>
+							</div>
 
-						<li class="mob-menu__item">
-							<a href="#">Услуги</a>
-						</li>
+							<div class="header__logo">
+								<a href="#">
+									<img src="./img/logo.svg" alt="" />
+								</a>
+							</div>
+						</div>
 
-						<li class="mob-menu__item">
-							<a href="#">Врачи</a>
-						</li>
+						<nav class="main-nav">
+	<ul class="main-nav__list">
+		<li class="main-nav__item hover-item">
+			<a href="#" class="main-nav__link">О клинике</a>
 
-						<li class="mob-menu__item">
-							<a href="#">Блог</a>
-						</li>
+			<ul class="main-nav__submenu show-menu">
+				<li class="main-nav__subitem hover-item">
+					<a href="#" class="main-nav__sublink">Фотогалерея</a>
+				</li>
 
-						<li class="mob-menu__item">
-							<a href="#">Вакансии</a>
-						</li>
+				<li class="main-nav__subitem hover-item">
+					<a href="#" class="main-nav__sublink">Сотрудничество</a>
+				</li>
 
-						<li class="mob-menu__item">
-							<a href="#">Контакты</a>
-						</li>
+				<li class="main-nav__subitem hover-item">
+					<a href="#" class="main-nav__sublink">Лицензии и сертификаты </a>
+				</li>
+
+				<li class="main-nav__subitem hover-item">
+					<a href="#" class="main-nav__sublink">Правовая информация</a>
+				</li>
+			</ul>
+		</li>
+
+		<li class="main-nav__item">
+			<a href="#" class="main-nav__link">Услуги</a>
+		</li>
+
+		<li class="main-nav__item">
+			<a href="#" class="main-nav__link">Врачи</a>
+		</li>
+
+		<li class="main-nav__item">
+			<a href="#" class="main-nav__link">Блог</a>
+		</li>
+
+		<li class="main-nav__item">
+			<a href="#" class="main-nav__link">Вакансии</a>
+		</li>
+
+		<li class="main-nav__item">
+			<a href="#" class="main-nav__link">Контакты</a>
+		</li>
+	</ul>
+</nav>
+
+
+						<div class="header__group">
+							<a href="#" class="header__btn main-btn">Записаться</a>
+
+							<a href="#" class="header__callback">
+								<img src="./img/phone.svg" alt="" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- // HEADER -->
+
+
+<main class="main">
+	<div class="content-top --gray">
+		<div class="container">
+			<div class="content-top__wrap">
+				<div class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="#">Главная</a></li>
+						<li class="breadcrumbs__item"><a href="#">Врачи</a></li>
+						<li class="breadcrumbs__item"><span>Малышев Илья Владимирович</span></li>
 					</ul>
 				</div>
 
-				<div class="mob-menu__bottom">
-					<div class="mob-menu__group-link">
-						<a href="#" class="mob-menu__link">8 (812) 888-88-88</a>
-						<a href="#" class="mob-menu__link">info@miclinic.ru</a>
+				<div class="content-top__row">
+					<div class="content-top__column">
+						<div class="content-top__title title-h1">
+							Малышев<br />
+							Илья Владимирович
+						</div>
+
+						<div class="content-top__text">
+							Врач-остеопат, мануальный терапевт, врач спортивной<br />
+							медицины, врач-реабилитолог, врач-педиатр
+						</div>
+
+						<div class="content-top__price">Прием от 3 000 ₽</div>
 					</div>
 
-					<div class="mob-menu__social">
-						<a href="#" class="mob-menu__social-link">
-							<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
-								fill="none">
-								<g clip-path="url(#clip0_228_1090)">
-									<path
-										d="M23.7225 0.00994141L25.545 0.00244141H34.455L36.28 0.00994141L38.565 0.0349414L39.6475 0.0524414L40.6925 0.0799414L41.7 0.114941L42.67 0.154941L43.605 0.207441L44.505 0.269941L45.3675 0.344941L46.2 0.427441C50.55 0.917441 53.5325 1.96744 55.7825 4.21744C58.0325 6.46744 59.0825 9.44744 59.5725 13.7999L59.6575 14.6324L59.73 15.4974L59.7925 16.3974L59.8425 17.3299L59.905 18.7999L59.935 19.8249L59.9675 21.4349L59.99 23.7224L60 26.1724L59.9975 34.4549L59.99 36.2799L59.965 38.5649L59.9475 39.6474L59.92 40.6924L59.885 41.6999L59.845 42.6699L59.7925 43.6049L59.73 44.5049L59.655 45.3674L59.5725 46.1999C59.0825 50.5499 58.0325 53.5324 55.7825 55.7824C53.5325 58.0324 50.5525 59.0824 46.2 59.5724L45.3675 59.6574L44.5025 59.7299L43.6025 59.7924L42.67 59.8424L41.2 59.9049L40.175 59.9349L38.565 59.9674L36.2775 59.9899L33.8275 59.9999L25.545 59.9974L23.72 59.9899L21.435 59.9649L20.3525 59.9474L19.3075 59.9199L18.3 59.8849L17.33 59.8449L16.395 59.7924L15.495 59.7299L14.6325 59.6549L13.8 59.5724C9.45 59.0824 6.4675 58.0324 4.2175 55.7824C1.9675 53.5324 0.9175 50.5524 0.4275 46.1999L0.3425 45.3674L0.27 44.5024L0.2075 43.6024L0.1575 42.6699L0.095 41.1999L0.065 40.1749L0.0325 38.5649L0.01 36.2774L0 33.8274L0.0025 25.5449L0.01 23.7199L0.035 21.4349L0.0525 20.3524L0.08 19.3074L0.115 18.2999L0.155 17.3299L0.2075 16.3949L0.27 15.4949L0.345 14.6324L0.4275 13.7999C0.9175 9.44994 1.9675 6.46744 4.2175 4.21744C6.4675 1.96744 9.4475 0.917441 13.8 0.427441L14.6325 0.342441L15.4975 0.269941L16.3975 0.207441L17.33 0.157441L18.8 0.0949414L19.825 0.0649414L21.435 0.0324414L23.7225 0.00994141ZM16.975 18.2499H10.125C10.45 33.8499 18.25 43.2249 31.925 43.2249H32.7V34.2999C37.725 34.7999 41.525 38.4749 43.05 43.2249H50.15C48.2 36.1249 43.075 32.1999 39.875 30.6999C43.075 28.8499 47.575 24.3499 48.65 18.2499H42.2C40.8 23.1999 36.65 27.6999 32.7 28.1249V18.2499H26.25V35.5499C22.25 34.5499 17.2 29.6999 16.975 18.2499Z"
-										fill="#E1E1E1" />
-								</g>
-								<defs>
-									<clipPath id="clip0_228_1090">
-										<rect width="60" height="60" fill="white" />
-									</clipPath>
-								</defs>
-							</svg>
-						</a>
+					<div class="content-top__column">
+						<div class="content-top__avatar">
+							<img src="./img/avatr-medic.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-						<a href="#" class="mob-menu__social-link">
-							<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
-								fill="none">
-								<g clip-path="url(#clip0_228_1092)">
-									<path fill-rule="evenodd" clip-rule="evenodd"
-										d="M60 30C60 46.5675 46.5675 60 30 60C13.4325 60 0 46.5675 0 30C0 13.4325 13.4325 0 30 0C46.5675 0 60 13.4325 60 30ZM31.075 22.1475C28.1575 23.36 22.325 25.8725 13.58 29.6825C12.16 30.2475 11.415 30.8 11.3475 31.34C11.2325 32.255 12.3775 32.615 13.9325 33.1025C14.145 33.17 14.365 33.2375 14.59 33.3125C16.1225 33.81 18.1825 34.3925 19.2525 34.415C20.225 34.435 21.31 34.035 22.5075 33.215C30.6775 27.6975 34.895 24.91 35.16 24.85C35.3475 24.8075 35.6075 24.7525 35.7825 24.91C35.9575 25.065 35.94 25.36 35.9225 25.44C35.8075 25.9225 31.3225 30.095 28.9975 32.255C28.2725 32.9275 27.76 33.405 27.655 33.515C27.42 33.7575 27.18 33.99 26.95 34.2125C25.525 35.5825 24.46 36.6125 27.01 38.2925C28.235 39.1 29.215 39.7675 30.1925 40.4325C31.26 41.16 32.325 41.885 33.705 42.79C34.055 43.02 34.39 43.2575 34.7175 43.49C35.96 44.3775 37.0775 45.1725 38.4575 45.0475C39.2575 44.9725 40.0875 44.22 40.5075 41.9725C41.5 36.6575 43.455 25.1475 43.9075 20.4025C43.935 20.0085 43.9183 19.6127 43.8575 19.2225C43.8211 18.9073 43.6677 18.6173 43.4275 18.41C43.07 18.1175 42.515 18.055 42.265 18.06C41.1375 18.08 39.4075 18.6825 31.075 22.1475Z"
-										fill="#E1E1E1" />
-								</g>
-								<defs>
-									<clipPath id="clip0_228_1092">
-										<rect width="60" height="60" fill="white" />
-									</clipPath>
-								</defs>
-							</svg>
+	<section class="medic">
+		<div class="container">
+			<div class="medic__wrap">
+				<div class="medic__title title-h2">Записаться к врачу</div>
+
+				<div class="medic__order">
+					<div class="medic__order-form order-doctor">
+						<div class="order-doctor__step time-doctors active">
+							<div class="time-doctors__row">
+								<div class="time-doctors__column">
+									<div class="time-doctors__calendar calendar-doctor"></div>
+								</div>
+
+								<div class="time-doctors__column">
+									<div class="time-doctors__clock clock-doctors">
+										<div class="clock-doctors__top">
+											<div class="clock-doctors__list-time js-list-time">
+												<div class="clock-doctors__item-time js-time">14:00</div>
+												<div class="clock-doctors__item-time js-time">15:00</div>
+												<div class="clock-doctors__item-time js-time">16:00</div>
+												<div class="clock-doctors__item-time js-time">17:00</div>
+												<div class="clock-doctors__item-time js-time">18:00</div>
+											</div>
+
+											<div class="clock-doctors__tip js-tip active">
+												<div class="clock-doctors__text">Ближайшая запись к специалисту:</div>
+
+												<div class="clock-doctors__link">понедельник, 26 сентября</div>
+											</div>
+										</div>
+
+										<div class="clock-doctors__bottom">
+											<div class="clock-doctors__adress">Санкт-Петербург – Клиника, Наличная улица, 40к1</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="order-doctor__step result-doctors">
+							<div class="result-doctors__list">
+								<div class="result-doctors__item wrap-input --fz16 --small">
+									<div class="wrap-input__name">Услуга</div>
+
+									<select>
+										<option selected value="Прием (осмотр, консультация) врача-остеопата повторный">Прием (осмотр, консультация) врача-остеопата повторный</option>
+										<option selected value="Остеопатия при заболеваниях центральной нервной системы">Остеопатия при заболеваниях центральной нервной системы</option>
+									</select>
+								</div>
+
+								<div class="result-doctors__item wrap-input --small">
+									<div class="wrap-input__name">Дата и время приема</div>
+
+									<div class="wrap-input__info">
+										<div class="wrap-input__text">26 сентября, 16:00</div>
+
+										<div class="wrap-input__icon-calendar js-back">
+											<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+												<path d="M3.75 8.375C3.75 6.16586 5.54086 4.375 7.75 4.375H22.25C24.4591 4.375 26.25 6.16586 26.25 8.375V23.5C26.25 25.7091 24.4591 27.5 22.25 27.5H7.75C5.54086 27.5 3.75 25.7091 3.75 23.5V8.375Z" stroke="#8EAEBA" stroke-width="1.5" />
+												<path d="M3.75 11.25H26.25" stroke="#8EAEBA" stroke-width="1.5" stroke-linecap="round" />
+												<path d="M10 2.5L10 6.25" stroke="#8EAEBA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M20 2.5V6.25" stroke="#8EAEBA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+												<circle cx="15" cy="18.75" r="1.25" fill="#8EAEBA" />
+												<circle cx="20" cy="18.75" r="1.25" fill="#8EAEBA" />
+												<circle cx="10" cy="18.75" r="1.25" fill="#8EAEBA" />
+											</svg>
+										</div>
+									</div>
+								</div>
+
+								<div class="result-doctors__item wrap-input --small">
+									<div class="wrap-input__name">Вы впервые у доктора?</div>
+
+									<select>
+										<option selected value="Первый приём">Первый приём</option>
+										<option value="Второй приём">Второй приём</option>
+									</select>
+								</div>
+
+								<div class="result-doctors__item wrap-input --small">
+									<div class="wrap-input__name">Номер телефона</div>
+
+									<input type="tel" />
+								</div>
+
+								<div class="result-doctors__item wrap-input --small">
+									<div class="wrap-input__name">ФИО пациента</div>
+
+									<input type="text" />
+								</div>
+							</div>
+
+							<div class="result-doctors__group">
+								<label class="result-doctors__checkbox checkbox">
+									<input type="checkbox" checked />
+									<div class="checkbox__checkmarck"></div>
+									<div class="checkbox__text">Я согласен с <a href="#">условиями обработки персональных данных</a></div>
+								</label>
+
+								<a href="#" class="result-doctors__btn main-btn --small">Записаться</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="medic__order-info medic-info">
+						<div class="medic-info__text block-text">
+							<h2>О враче</h2>
+
+							<h3>Образование</h3>
+
+							<ul>
+								<li>Санкт- Петербурский государственный педиатрический медицинский университет</li>
+								<li>Интернатура по педиатрии</li>
+								<li>Ординатура по мануальной терапии</li>
+								<li>Окончил курс прикладной кинезиологии в академии Васильевой</li>
+								<li>На данный момент заканчиваю обучение в Северо-Западной академия остеопатии</li>
+							</ul>
+
+							<h3>Опыт работы</h3>
+
+							<ul>
+								<li>10+ лет</li>
+							</ul>
+						</div>
+
+						<a href="#" class="price-list">
+							Дипломы врача
+							<span>648.5 кб</span>
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
+	</section>
 
-		<header class="header">
-			<div class="container">
-				<div class="header__wrap">
-					<div class="header__logo-group">
-						<div class="header__burger js-burger">
-							<span></span>
-						</div>
+	<section class="addres --gray">
+		<div class="container">
+			<div class="addres__wrap">
+				<div class="addres__row">
+					<div class="addres__column">
+						<div class="addres__title title-h3">Санкт-Петербург – Клиника, Наличная улица, 40к1</div>
 
-						<div class="header__logo">
-							<a href="#">
-								<img src="./img/logo.svg" alt="" />
-							</a>
-						</div>
+						<a href="#" class="addres__btn main-btn">Записаться на прием</a>
 					</div>
 
+					<div class="addres__column">
+						<a href="tel:88128888888" class="addres__phone">8 (812) 888-88-88</a>
+					</div>
 
-					<nav class="main-nav">
-    <ul class="main-nav__list">
+					<div class="addres__column">
+						<div class="addres__list-time">
+							<div class="addres__item-time">
+								<span>Понедельник</span>
+								<span>08:00 — 21:00</span>
+							</div>
 
-        <li class="main-nav__item hover-item">
-            <a href="#" class="main-nav__link">О клинике</a>
+							<div class="addres__item-time">
+								<span>Вторник</span>
+								<span>08:00 — 21:00</span>
+							</div>
 
-            <!-- <ul class="main-nav__submenu show-menu">
+							<div class="addres__item-time">
+								<span>Среда</span>
+								<span>08:00 — 21:00</span>
+							</div>
 
-                <li class="main-nav__subitem hover-item">
-                    <a href="#" class="main-nav__sublink">Уровень меню 2</a>
-                </li>
+							<div class="addres__item-time">
+								<span>Четверг</span>
+								<span>08:00 — 21:00</span>
+							</div>
 
-                <li class="main-nav__subitem hover-item">
-                    <a href="#" class="main-nav__sublink">Уровень меню 2</a>
-                </li>
+							<div class="addres__item-time">
+								<span>Пятница</span>
+								<span>08:00 — 21:00</span>
+							</div>
 
-                <li class="main-nav__subitem hover-item">
-                    <a href="#" class="main-nav__sublink">Уровень меню 2</a>
-                </li>
+							<div class="addres__item-time">
+								<span>Суббота</span>
+								<span>09:00 — 19:00</span>
+							</div>
 
-            </ul> -->
-
-        </li>
-
-        <li class="main-nav__item hover-item">
-            <a href="#" class="main-nav__link">Услуги</a>
-        </li>
-
-        <li class="main-nav__item hover-item">
-            <a href="#" class="main-nav__link">Врачи</a>
-        </li>
-
-        <li class="main-nav__item hover-item">
-            <a href="#" class="main-nav__link">Блог</a>
-        </li>
-
-        <li class="main-nav__item hover-item">
-            <a href="#" class="main-nav__link">Вакансии</a>
-        </li>
-
-        <li class="main-nav__item hover-item">
-            <a href="#" class="main-nav__link">Контакты</a>
-        </li>
-
-    </ul>
-</nav>
-
-					<div class="header__group">
-						<a href="#" class="header__btn main-btn">Записаться</a>
-
-						<a href="#" class="header__callback">
-							<img src="./img/phone.svg" alt="" />
-						</a>
+							<div class="addres__item-time">
+								<span>Воскресенье</span>
+								<span>10:00 — 18:00</span>
+							</div>
+						</div>
 					</div>
 				</div>
+
+				<div class="addres__map" id="map-addres"></div>
+
+				<script>
+					document.addEventListener("DOMContentLoaded", function () {
+						ymaps.ready(function () {
+							var myMap = new ymaps.Map("map-addres", {
+								center: [59.949911, 30.231912],
+								zoom: 15,
+							});
+							// Создаём макет содержимого.
+							var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>');
+							var myPlacemark = new ymaps.Placemark(
+								myMap.getCenter(),
+								{},
+								{
+									iconLayout: "default#image",
+									iconImageHref: "./img/map-pin.svg",
+									iconImageSize: [60, 60],
+									iconImageOffset: [-5, -38],
+								}
+							);
+
+							myMap.geoObjects.add(myPlacemark);
+						});
+					});
+				</script>
 			</div>
-		</header>
-
-		<!-- // HEADER -->
-
-<main class="main">
-
-    <div class="content-top --gray">
-        <div class="container">
-            <div class="content-top__wrap">
-
-                <div class="breadcrumbs">
-                    <ul class="breadcrumbs__list">
-                        <li class="breadcrumbs__item"><a href="#">Главная</a></li>
-                        <li class="breadcrumbs__item"><a href="#">Врачи</a></li>
-                        <li class="breadcrumbs__item"><span>Малышев Илья Владимирович</span></li>
-                    </ul>
-                </div>
-
-                <div class="content-top__row">
-                    <div class="content-top__column">
-                        <div class="content-top__title title-h1">
-                            Малышев<br> Илья Владимирович
-                        </div>
-
-                        <div class="content-top__text">Врач-остеопат, мануальный терапевт, врач спортивной<br> медицины,
-                            врач-реабилитолог, врач-педиатр</div>
-
-                        <div class="content-top__price">Прием от 3 000 ₽</div>
-                    </div>
-
-                    <div class="content-top__column">
-                        <div class="content-top__avatar">
-                            <img src="./img/avatr-medic.png" alt="">
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <section class="medic">
-        <div class="container">
-            <div class="medic__wrap">
-                <div class="medic__title title-h2"></div>
-
-                <div class="medic__order appointment-doctor">
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="addres --gray">
-        <div class="container">
-            <div class="addres__wrap">
-                <div class="addres__row">
-                    <div class="addres__column">
-                        <div class="addres__title title-h3">Санкт-Петербург – Клиника, Наличная улица, 40к1</div>
-
-                        <a href="#" class="addres__btn main-btn">Записаться на прием</a>
-                    </div>
-
-                    <div class="addres__column">
-                        <a href="tel:88128888888" class="addres__phone">8 (812) 888-88-88</a>
-                    </div>
-
-                    <div class="addres__column">
-                        <div class="addres__list-time">
-                            <div class="addres__item-time">
-                                <span>Понедельник</span>
-                                <span>08:00 — 21:00</span>
-                            </div>
-
-                            <div class="addres__item-time">
-                                <span>Вторник</span>
-                                <span>08:00 — 21:00</span>
-                            </div>
-
-                            <div class="addres__item-time">
-                                <span>Среда</span>
-                                <span>08:00 — 21:00</span>
-                            </div>
-
-                            <div class="addres__item-time">
-                                <span>Четверг</span>
-                                <span>08:00 — 21:00</span>
-                            </div>
-
-                            <div class="addres__item-time">
-                                <span>Пятница</span>
-                                <span>08:00 — 21:00</span>
-                            </div>
-
-                            <div class="addres__item-time">
-                                <span>Суббота</span>
-                                <span>09:00 — 19:00</span>
-                            </div>
-
-                            <div class="addres__item-time">
-                                <span>Воскресенье</span>
-                                <span>10:00 — 18:00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="addres__map" id="map-addres">
-                </div>
-
-                <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        ymaps.ready(function () {
-                            var myMap = new ymaps.Map("map-addres", {
-                                center: [59.949911, 30.231912],
-                                zoom: 15,
-                            });
-                            // Создаём макет содержимого.
-                            var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>');
-                            var myPlacemark = new ymaps.Placemark(
-                                myMap.getCenter(),
-                                {},
-                                {
-                                    iconLayout: "default#image",
-                                    iconImageHref: "./img/map-pin.svg",
-                                    iconImageSize: [60, 60],
-                                    iconImageOffset: [-5, -38],
-                                }
-                            );
-
-                            myMap.geoObjects.add(myPlacemark);
-                        });
-                    });
-                </script>
-            </div>
-        </div>
-    </section>
-
+		</div>
+	</section>
 </main>
 
 <!-- FOOTER -->
@@ -658,6 +772,9 @@
 <script src="./js/nice-select2.js"></script>
 <script src="./js/inputmask.js"></script>
 <script src="./js/dynamicAdapt.js"></script>
+<script src="./js/lightgallery.min.js"></script>
+<script src="./js/lg-thumbnail.min.js"></script>
+<script src="./js/lg-fullscreen.min.js"></script>
 <script src="./js/script.js"></script>
 </body>
 

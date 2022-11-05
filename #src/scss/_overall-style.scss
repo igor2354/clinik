@@ -26,6 +26,9 @@ body.lock {
 	overflow: hidden;
 	width: 100%;
 	min-height: 100%;
+
+	display: flex;
+	flex-direction: column;
 }
 
 .container {
@@ -42,6 +45,7 @@ body.lock {
 
 .main {
 	margin-top: 144px;
+	flex-grow: 1;
 }
 
 @media (max-width: 1270px) {
@@ -272,9 +276,6 @@ h3 {
 	}
 
 	&__column {
-		&:first-child {
-			max-width: 590px;
-		}
 	}
 
 	&__title {
@@ -528,6 +529,82 @@ h3 {
 		&__text {
 			padding-left: 25px;
 			font-size: 12px;
+		}
+	}
+}
+
+.block-text {
+	&__row {
+		margin-bottom: 30px;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+	}
+
+	&__column {
+	}
+
+	& h1 {
+		margin-bottom: 90px;
+	}
+
+	& h2 {
+		margin-bottom: 60px;
+	}
+
+	& h3 {
+		font-weight: 350;
+		margin-bottom: 30px;
+	}
+
+	& h4 {
+		margin-bottom: 20px;
+	}
+
+	& h5 {
+		margin-bottom: 20px;
+	}
+
+	& h6 {
+		margin-bottom: 20px;
+	}
+
+	& p {
+		margin-bottom: 30px;
+	}
+
+	& ul,
+	& ol {
+		margin-bottom: 60px;
+	}
+
+	& ol {
+		& li {
+			list-style-position: inside;
+			&::marker {
+				color: #8eaeba;
+			}
+		}
+	}
+
+	& ul {
+		& li {
+			position: relative;
+			padding-left: 40px;
+			&:not(:last-child) {
+				margin-bottom: 35px;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				top: 6px;
+				left: 0;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: #8eaeba;
+			}
 		}
 	}
 }
