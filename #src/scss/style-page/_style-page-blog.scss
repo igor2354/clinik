@@ -60,3 +60,50 @@
 		}
 	}
 }
+
+@media (max-width: 1270px) {
+	.blog-page {
+		&__list {
+			gap: 30px;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.blog-category {
+		&__list {
+			flex-wrap: initial;
+			overflow: auto;
+			max-width: calc(100vw - 15px);
+		}
+
+		&__item {
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+			& a {
+				white-space: nowrap;
+				padding: 10px 20px;
+				font-size: 14px;
+			}
+		}
+	}
+
+	.blog-page {
+		&__list {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__all {
+			margin-top: 30px;
+		}
+	}
+}
+
+@media (max-width: 630px) {
+	.blog-page {
+		&__list {
+			grid-template-columns: 1fr;
+		}
+	}
+}

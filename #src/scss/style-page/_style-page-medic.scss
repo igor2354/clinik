@@ -27,3 +27,33 @@
 		margin-bottom: 95px;
 	}
 }
+
+@media (max-width: 1270px) {
+	.medic {
+		&__wrap {
+			padding: 60px 0;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.medic {
+		&__wrap {
+			padding: 45px 0;
+		}
+
+		&__title {
+			margin-bottom: 20px;
+		}
+
+		&__order-form {
+			margin-bottom: 45px;
+		}
+	}
+
+	.medic-info {
+		&__text {
+			margin-bottom: 45px;
+		}
+	}
+}

@@ -1,200 +1,198 @@
 @@include("../components/_header.html")
 
 <main class="main">
+	<div class="content-top">
+		<div class="container">
+			<div class="content-top__wrap">
+				<div class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="#">Главная</a></li>
+						<li class="breadcrumbs__item"><span>Врачи</span></li>
+					</ul>
+				</div>
 
-    <div class="content-top">
-        <div class="container">
-            <div class="content-top__wrap">
+				<div class="content-top__row">
+					<div class="content-top__column">
+						<div class="content-top__title title-h2">Врачи</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-                <div class="breadcrumbs">
-                    <ul class="breadcrumbs__list">
-                        <li class="breadcrumbs__item"><a href="#">Главная</a></li>
-                        <li class="breadcrumbs__item"><span>Врачи</span></li>
-                    </ul>
-                </div>
+	<section class="doctors">
+		<div class="container">
+			<div class="doctors__wrap">
+				<div class="doctors__row">
+					<div class="doctors__column">
+						<div class="doctors__category category-doctors">
+							<div class="category-doctors__title title-h3">ФИО Врача</div>
 
-                <div class="content-top__row">
-                    <div class="content-top__column">
-                        <div class="content-top__title title-h2">
-                            Врачи
-                        </div>
-                    </div>
+							<div class="category-doctors__search js-placeholder">
+								<input type="text" class="category-doctors__search-input js-input" />
+								<span class="category-doctors__placeholder js-text-place">Введите имя врача</span>
+							</div>
+						</div>
 
-                </div>
+						<div class="doctors__category category-doctors">
+							<div class="category-doctors__title title-h3">Специализация врача</div>
 
-            </div>
+							<ul class="category-doctors__list">
+								<li class="category-doctors__item added">
+									<a href="#">Все</a>
+								</li>
 
-        </div>
-    </div>
+								<li class="category-doctors__item">
+									<a href="#">Остеопатия</a>
+								</li>
 
-    <section class="doctors">
-        <div class="container">
-            <div class="doctors__wrap">
-                <div class="doctors__row">
-                    <div class="doctors__column">
-                        <div class="doctors__category category-doctors">
-                            <div class="category-doctors__title title-h3">ФИО Врача</div>
+								<li class="category-doctors__item">
+									<a href="#">Неврологогия</a>
+								</li>
 
-                            <div class="category-doctors__search js-placeholder">
-                                <input type="text" class="category-doctors__search-input js-input">
-                                <span class="category-doctors__placeholder js-text-place">Введите имя врача</span>
-                            </div>
-                        </div>
+								<li class="category-doctors__item">
+									<a href="#">Реабилитация</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 
-                        <div class="doctors__category category-doctors">
-                            <div class="category-doctors__title title-h3">Специализация врача</div>
+					<div class="doctors__column">
+						<div class="doctors__list">
+							<div class="doctors__item card-doctors">
+								<div class="card-doctors__avatar">
+									<img src="./img/image-card-doctors.png" alt="" />
+								</div>
 
-                            <ul class="category-doctors__list">
-                                <li class="category-doctors__item added">
-                                    <a href="#">Все</a>
-                                </li>
+								<div class="card-doctors__group-title">
+									<div class="card-doctors__name">
+										Малышев <br />
+										Илья Владимирович
+									</div>
+									<div class="card-doctors__post">Врач-остеопат, мануальный терапевт, врач спортивной медицины, врач-реабилитолог, врач-педиатр</div>
+								</div>
 
-                                <li class="category-doctors__item">
-                                    <a href="#">Остеопатия</a>
-                                </li>
+								<div class="card-doctors__group-button">
+									<div class="card-doctors__price">Прием от 3 000 ₽</div>
 
-                                <li class="category-doctors__item">
-                                    <a href="#">Неврологогия</a>
-                                </li>
+									<div class="card-doctors__bottons">
+										<a href="#" class="card-doctors__btn main-btn --border">Подробнее</a>
+										<a href="#" class="card-doctors__btn main-btn">Записаться</a>
+									</div>
+								</div>
+							</div>
 
-                                <li class="category-doctors__item">
-                                    <a href="#">Реабилитация</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+							<div class="doctors__item card-doctors">
+								<div class="card-doctors__avatar">
+									<img src="./img/image-card-doctors.png" alt="" />
+								</div>
 
-                    <div class="doctors__column">
-                        <div class="doctors__list">
-                            <div class="doctors__item card-doctors">
-                                <div class="card-doctors__avatar">
-                                    <img src="./img/image-card-doctors.png" alt="">
-                                </div>
+								<div class="card-doctors__group-title">
+									<div class="card-doctors__name">
+										Малышев <br />
+										Илья Владимирович
+									</div>
+									<div class="card-doctors__post">Врач-остеопат, мануальный терапевт, врач спортивной медицины, врач-реабилитолог, врач-педиатр</div>
+								</div>
 
-                                <div class="card-doctors__group">
-                                    <div class="card-doctors__name">Малышев <br> Илья Владимирович</div>
-                                    <div class="card-doctors__post">Врач-остеопат, мануальный терапевт, врач спортивной
-                                        медицины, врач-реабилитолог, врач-педиатр</div>
+								<div class="card-doctors__group-button">
+									<div class="card-doctors__price">Прием от 3 000 ₽</div>
 
-                                    <div class="card-doctors__price">Прием от 3 000 ₽</div>
+									<div class="card-doctors__bottons">
+										<a href="#" class="card-doctors__btn main-btn --border">Подробнее</a>
+										<a href="#" class="card-doctors__btn main-btn">Записаться</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-                                    <div class="card-doctors__bottons">
-                                        <a href="#" class="card-doctors__btn main-btn --border">Подробнее</a>
-                                        <a href="#" class="card-doctors__btn main-btn">Записаться</a>
-                                    </div>
-                                </div>
-                            </div>
+	<section class="addres --gray">
+		<div class="container">
+			<div class="addres__wrap">
+				<div class="addres__row">
+					<div class="addres__column">
+						<div class="addres__title title-h3">Санкт-Петербург – Клиника, Наличная улица, 40к1</div>
 
-                            <div class="doctors__item card-doctors">
-                                <div class="card-doctors__avatar">
-                                    <img src="./img/image-card-doctors.png" alt="">
-                                </div>
+						<a href="#" class="addres__btn main-btn" data-da=".addres__column:last-child, 630 ,1">Записаться на прием</a>
+					</div>
 
-                                <div class="card-doctors__group">
-                                    <div class="card-doctors__name">Малышев <br> Илья Владимирович</div>
-                                    <div class="card-doctors__post">Врач-остеопат, мануальный терапевт, врач спортивной
-                                        медицины, врач-реабилитолог, врач-педиатр</div>
+					<div class="addres__column">
+						<div class="addres__info">
+							<a href="tel:88128888888" class="addres__phone">8 (812) 888-88-88</a>
+							<div class="addres__list-time">
+								<div class="addres__item-time">
+									<span>Понедельник</span>
+									<span>08:00 — 21:00</span>
+								</div>
 
-                                    <div class="card-doctors__price">Прием от 3 000 ₽</div>
+								<div class="addres__item-time">
+									<span>Вторник</span>
+									<span>08:00 — 21:00</span>
+								</div>
 
-                                    <div class="card-doctors__bottons">
-                                        <a href="#" class="card-doctors__btn main-btn --border">Подробнее</a>
-                                        <a href="#" class="card-doctors__btn main-btn">Записаться</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+								<div class="addres__item-time">
+									<span>Среда</span>
+									<span>08:00 — 21:00</span>
+								</div>
 
-    <section class="addres --gray">
-        <div class="container">
-            <div class="addres__wrap">
-                <div class="addres__row">
-                    <div class="addres__column">
-                        <div class="addres__title title-h3">Санкт-Петербург – Клиника, Наличная улица, 40к1</div>
+								<div class="addres__item-time">
+									<span>Четверг</span>
+									<span>08:00 — 21:00</span>
+								</div>
 
-                        <a href="#" class="addres__btn main-btn">Записаться на прием</a>
-                    </div>
+								<div class="addres__item-time">
+									<span>Пятница</span>
+									<span>08:00 — 21:00</span>
+								</div>
 
-                    <div class="addres__column">
-                        <a href="tel:88128888888" class="addres__phone">8 (812) 888-88-88</a>
-                    </div>
+								<div class="addres__item-time">
+									<span>Суббота</span>
+									<span>09:00 — 19:00</span>
+								</div>
 
-                    <div class="addres__column">
-                        <div class="addres__list-time">
-                            <div class="addres__item-time">
-                                <span>Понедельник</span>
-                                <span>08:00 — 21:00</span>
-                            </div>
+								<div class="addres__item-time">
+									<span>Воскресенье</span>
+									<span>10:00 — 18:00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-                            <div class="addres__item-time">
-                                <span>Вторник</span>
-                                <span>08:00 — 21:00</span>
-                            </div>
+				<div class="addres__map" data-da=".addres__info, 630 ,1" id="map-addres"></div>
 
-                            <div class="addres__item-time">
-                                <span>Среда</span>
-                                <span>08:00 — 21:00</span>
-                            </div>
+				<script>
+					document.addEventListener("DOMContentLoaded", function () {
+						ymaps.ready(function () {
+							var myMap = new ymaps.Map("map-addres", {
+								center: [59.949911, 30.231912],
+								zoom: 15,
+							});
+							// Создаём макет содержимого.
+							var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>');
+							var myPlacemark = new ymaps.Placemark(
+								myMap.getCenter(),
+								{},
+								{
+									iconLayout: "default#image",
+									iconImageHref: "./img/map-pin.svg",
+									iconImageSize: [60, 60],
+									iconImageOffset: [-5, -38],
+								}
+							);
 
-                            <div class="addres__item-time">
-                                <span>Четверг</span>
-                                <span>08:00 — 21:00</span>
-                            </div>
-
-                            <div class="addres__item-time">
-                                <span>Пятница</span>
-                                <span>08:00 — 21:00</span>
-                            </div>
-
-                            <div class="addres__item-time">
-                                <span>Суббота</span>
-                                <span>09:00 — 19:00</span>
-                            </div>
-
-                            <div class="addres__item-time">
-                                <span>Воскресенье</span>
-                                <span>10:00 — 18:00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="addres__map" id="map-addres">
-                </div>
-
-                <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        ymaps.ready(function () {
-                            var myMap = new ymaps.Map("map-addres", {
-                                center: [59.949911, 30.231912],
-                                zoom: 15,
-                            });
-                            // Создаём макет содержимого.
-                            var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>');
-                            var myPlacemark = new ymaps.Placemark(
-                                myMap.getCenter(),
-                                {},
-                                {
-                                    iconLayout: "default#image",
-                                    iconImageHref: "./img/map-pin.svg",
-                                    iconImageSize: [60, 60],
-                                    iconImageOffset: [-5, -38],
-                                }
-                            );
-
-                            myMap.geoObjects.add(myPlacemark);
-                        });
-                    });
-                </script>
-            </div>
-        </div>
-    </section>
-
+							myMap.geoObjects.add(myPlacemark);
+						});
+					});
+				</script>
+			</div>
+		</div>
+	</section>
 </main>
 
 @@include("../components/_footer.html")

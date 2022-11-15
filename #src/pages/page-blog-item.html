@@ -193,61 +193,60 @@
 		</div>
 	</section>
 
-	<section class="addres --gray">
+	<section class="addres">
 		<div class="container">
 			<div class="addres__wrap">
 				<div class="addres__row">
 					<div class="addres__column">
 						<div class="addres__title title-h3">Санкт-Петербург – Клиника, Наличная улица, 40к1</div>
 
-						<a href="#" class="addres__btn main-btn">Записаться на прием</a>
+						<a href="#" class="addres__btn main-btn" data-da=".addres__column:last-child, 630 ,1">Записаться на прием</a>
 					</div>
 
 					<div class="addres__column">
-						<a href="tel:88128888888" class="addres__phone">8 (812) 888-88-88</a>
-					</div>
+						<div class="addres__info">
+							<a href="tel:88128888888" class="addres__phone">8 (812) 888-88-88</a>
+							<div class="addres__list-time">
+								<div class="addres__item-time">
+									<span>Понедельник</span>
+									<span>08:00 — 21:00</span>
+								</div>
 
-					<div class="addres__column">
-						<div class="addres__list-time">
-							<div class="addres__item-time">
-								<span>Понедельник</span>
-								<span>08:00 — 21:00</span>
-							</div>
+								<div class="addres__item-time">
+									<span>Вторник</span>
+									<span>08:00 — 21:00</span>
+								</div>
 
-							<div class="addres__item-time">
-								<span>Вторник</span>
-								<span>08:00 — 21:00</span>
-							</div>
+								<div class="addres__item-time">
+									<span>Среда</span>
+									<span>08:00 — 21:00</span>
+								</div>
 
-							<div class="addres__item-time">
-								<span>Среда</span>
-								<span>08:00 — 21:00</span>
-							</div>
+								<div class="addres__item-time">
+									<span>Четверг</span>
+									<span>08:00 — 21:00</span>
+								</div>
 
-							<div class="addres__item-time">
-								<span>Четверг</span>
-								<span>08:00 — 21:00</span>
-							</div>
+								<div class="addres__item-time">
+									<span>Пятница</span>
+									<span>08:00 — 21:00</span>
+								</div>
 
-							<div class="addres__item-time">
-								<span>Пятница</span>
-								<span>08:00 — 21:00</span>
-							</div>
+								<div class="addres__item-time">
+									<span>Суббота</span>
+									<span>09:00 — 19:00</span>
+								</div>
 
-							<div class="addres__item-time">
-								<span>Суббота</span>
-								<span>09:00 — 19:00</span>
-							</div>
-
-							<div class="addres__item-time">
-								<span>Воскресенье</span>
-								<span>10:00 — 18:00</span>
+								<div class="addres__item-time">
+									<span>Воскресенье</span>
+									<span>10:00 — 18:00</span>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="addres__map" id="map-addres"></div>
+				<div class="addres__map" data-da=".addres__info, 630 ,1" id="map-addres"></div>
 
 				<script>
 					document.addEventListener("DOMContentLoaded", function () {

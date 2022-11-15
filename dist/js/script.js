@@ -54,14 +54,26 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	let sliderOtherBlog = new Swiper(".blog-other .blog-other__slider", {
-		slidesPerView: 3,
+		slidesPerView: 1,
+		spaceBetween: 30,
 		initialSlide: 2,
-		spaceBetween: 60,
 		watchOverflow: true,
 		watchSlidesProgress: true,
 		navigation: {
 			nextEl: ".blog-other .slider-arrow-next",
 			prevEl: ".blog-other .slider-arrow-prev",
+		},
+
+		breakpoints: {
+			1000: {
+				slidesPerView: 3,
+				spaceBetween: 60,
+			},
+
+			630: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+			},
 		},
 	});
 
@@ -79,6 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	let burger = document.querySelector(".js-burger");
 	let mobMenu = document.querySelector(".mob-menu");
 	let closeMenu = document.querySelector(".js-close-menu");
+	let openSubMenu = document.querySelectorAll(".js-open-submenu");
+	let closeSubMenu = document.querySelectorAll(".js-close-submenu");
 
 	if (burger != null && mobMenu != null && closeMenu != null) {
 		burger.addEventListener("click", function () {
@@ -89,6 +103,20 @@ document.addEventListener("DOMContentLoaded", function () {
 		closeMenu.addEventListener("click", function () {
 			mobMenu.classList.remove("active");
 			bodyLock(false);
+		});
+	}
+
+	if (openSubMenu.length > 0 && closeSubMenu.length > 0) {
+		openSubMenu.forEach(element => {
+			element.addEventListener("click", function() {
+				this.closest(".mob-menu__item").querySelector(".mob-menu__submenu").classList.add("active");
+			});
+		});
+
+		closeSubMenu.forEach(element => {
+			element.addEventListener("click", function() {
+				this.closest(".mob-menu__submenu").classList.remove("active");
+			});
 		});
 	}
 

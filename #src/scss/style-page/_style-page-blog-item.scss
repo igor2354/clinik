@@ -70,3 +70,39 @@
 		}
 	}
 }
+
+@media (max-width: 1270px) {
+	.blog-article {
+		&__wrap {
+			padding: 30px 0 60px 0;
+		}
+	}
+
+	.blog-other {
+		padding: 60px 0;
+
+		&__group {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.blog-article {
+		&__text {
+			margin-bottom: 30px;
+			& h2 {
+				font-size: 21px;
+				margin-bottom: 20px;
+			}
+		}
+
+		&__source-title {
+			font-size: 18px;
+		}
+
+		&__source-link {
+			font-size: 14px;
+		}
+	}
+}

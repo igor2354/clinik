@@ -13,3 +13,30 @@
 		}
 	}
 }
+
+@media (max-width: 1270px) {
+	.page-about {
+		&__wrap {
+			padding: 30px 0 60px 0;
+		}
+
+		&__text {
+			& h2 {
+				&:not(:first-child) {
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.block-text {
+		&__row {
+			grid-template-columns: 1fr;
+			gap: 20px;
+			justify-items: center;
+		}
+	}
+}

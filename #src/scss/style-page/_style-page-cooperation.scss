@@ -64,3 +64,39 @@
 		}
 	}
 }
+
+@media (max-width: 1270px) {
+	.cooperation {
+		&__wrap {
+			padding: 0px 0 60px 0;
+		}
+
+		&__lsit {
+			gap: 20px;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.card-cooperation {
+		padding: 30px 20px;
+
+		&__post {
+			margin-bottom: 25px;
+		}
+	}
+
+	.cooperation {
+		&__lsit {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media (max-width: 630px) {
+	.cooperation {
+		&__lsit {
+			grid-template-columns: 1fr;
+		}
+	}
+}

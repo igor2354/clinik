@@ -58,3 +58,32 @@
 		}
 	}
 }
+
+@media (max-width: 1270px) {
+	.gallery {
+		&__wrap {
+			padding: 30px 0 60px 0;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.gallery {
+		&__lsit {
+			gap: 20px;
+		}
+	}
+	.card-gallery {
+		&__group {
+			padding: 20px;
+		}
+	}
+}
+
+@media (max-width: 630px) {
+	.gallery {
+		&__lsit {
+			grid-template-columns: 1fr;
+		}
+	}
+}
