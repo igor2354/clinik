@@ -3186,6 +3186,26 @@ h3 {
       margin-right: 0;
       margin-bottom: 15px; } }
 
+.order-result {
+  padding: 25px 0 60px 0;
+  max-width: 400px;
+  margin: 0 auto; }
+  .order-result__text {
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    margin-bottom: 20px; }
+  .order-result__phone {
+    margin-bottom: 90px;
+    display: block;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    text-align: center;
+    color: #000000; }
+  .order-result__btn:not(:last-child) {
+    margin-bottom: 20px; }
+
 .footer {
   background: #8eaeba; }
   .footer__wrap {
