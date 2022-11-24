@@ -81,6 +81,22 @@
 			background: #eef3f5;
 		}
 	}
+
+	&.--step-3 {
+		& .popup-general__group-title {
+			padding-top: 50px;
+		}
+	}
+
+	&.--step-4 {
+		& .popup-general__group-title {
+			padding-top: 70px;
+		}
+
+		& .popup-general__title {
+			display: none;
+		}
+	}
 }
 
 .doctors-popup {
@@ -704,8 +720,8 @@
 }
 
 .order-result {
-	padding: 25px 0 60px 0;
-	max-width: 400px;
+	padding: 25px 20px 60px 20px;
+	max-width: 440px;
 	margin: 0 auto;
 	&__text {
 		font-size: 18px;
@@ -730,6 +746,75 @@
 	&__btn {
 		&:not(:last-child) {
 			margin-bottom: 20px;
+		}
+	}
+}
+
+.order-end {
+	padding: 20px 20px 95px 20px;
+	max-width: 515px;
+	margin: 0 auto;
+	text-align: center;
+	&__title {
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.popup-general {
+		&.--step-3 {
+			& .popup-general__group-title {
+				padding-top: 30px;
+			}
+		}
+
+		&.--step-4 {
+			& .popup-general__group-title {
+				padding-top: 50px;
+			}
+		}
+	}
+
+	.order-result {
+		padding: 25px 20px 40px 20px;
+		&__text {
+			font-size: 16px;
+		}
+
+		&__phone {
+			margin-bottom: 45px;
+			font-size: 24px;
+		}
+	}
+
+	.order-end {
+		padding: 20px 20px 45px 20px;
+	}
+}
+
+@media (max-width: 630px) {
+	.popup-general {
+		&.--step-3 {
+			& .popup-general__group-title {
+				padding-top: 15px;
+			}
+		}
+
+		&.--step-4 {
+			& .popup-general__group-title {
+				padding-top: 15px;
+			}
+		}
+
+		.order-result {
+			&__text {
+				font-size: 16px;
+			}
+
+			&__phone {
+				margin-bottom: 20px;
+				font-size: 18px;
+			}
 		}
 	}
 }

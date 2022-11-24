@@ -107,14 +107,14 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	if (openSubMenu.length > 0 && closeSubMenu.length > 0) {
-		openSubMenu.forEach(element => {
-			element.addEventListener("click", function() {
+		openSubMenu.forEach((element) => {
+			element.addEventListener("click", function () {
 				this.closest(".mob-menu__item").querySelector(".mob-menu__submenu").classList.add("active");
 			});
 		});
 
-		closeSubMenu.forEach(element => {
-			element.addEventListener("click", function() {
+		closeSubMenu.forEach((element) => {
+			element.addEventListener("click", function () {
 				this.closest(".mob-menu__submenu").classList.remove("active");
 			});
 		});
@@ -217,8 +217,34 @@ document.addEventListener("click", function (e) {
 		modal.classList.remove("--step-1");
 		modal.classList.add("--step-2");
 
+		modal.querySelector(".popup-general__title").textContent = "Выберите дату приема";
+
 		modal.querySelector(".js-step-1").classList.remove("active");
 		modal.querySelector(".js-step-2").classList.add("active");
+	}
+
+	if (element.closest(".js-next-order")) {
+		e.preventDefault();
+		let modal = element.closest(".modal");
+
+		modal.querySelector(".popup-general__title").textContent = "Хотите прервать запись?";
+
+		modal.classList.remove("--step-2");
+		modal.classList.add("--step-3");
+
+		modal.querySelector(".js-step-2").classList.remove("active");
+		modal.querySelector(".js-step-3").classList.add("active");
+	}
+
+	if (element.closest(".js-end-order")) {
+		e.preventDefault();
+		let modal = element.closest(".modal");
+
+		modal.classList.remove("--step-3");
+		modal.classList.add("--step-4");
+
+		modal.querySelector(".js-step-3").classList.remove("active");
+		modal.querySelector(".js-step-4").classList.add("active");
 	}
 
 	if (element.closest(".js-time")) {
