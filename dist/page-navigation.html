@@ -358,7 +358,7 @@
       <div class="popup-general__body">
 
         <div class="popup-general__group-title">
-          <div class="popup-general__title title-h3">Выберите врача</div>
+          <div class="popup-general__title title-h3">Онлайн-запись</div>
 
           <div class="popup-general__close js-modal-close"></div>
         </div>
@@ -369,85 +369,155 @@
 
             <div class="doctors-popup__step active js-step-1">
 
-              <div class="doctors-popup__slider swiper">
-                <div class="doctors-popup__arrows">
-                  <div class="slider-arrow-prev --white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                      <rect width="30" height="30" transform="matrix(1 0 0 -1 0 30)" fill="none" />
-                      <path d="M12.5 8.75L17.5 15L12.5 21.25" stroke="#2F2F2F" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </div>
-                  <div class="slider-arrow-next --white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                      <rect width="30" height="30" transform="matrix(1 0 0 -1 0 30)" fill="none" />
-                      <path d="M12.5 8.75L17.5 15L12.5 21.25" stroke="#2F2F2F" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
+              <div class="doctors-popup__main-screen" >
+                <div class="doctors-popup__main-screen-item wrap-input --fz16 --small">
+                  <div class="wrap-input__name">Категория</div>
+  
+                  <select>
+                    <option selected value="Не выбрано">Не выбрано</option>
+                    <option selected value="Остеопатия">Остеопатия</option>
+                    <option selected value="Неврологогия">Неврологогия</option>
+                    <option selected value="Реабилитация">Реабилитация</option>
+                  </select>
+                </div>
+  
+                <div class="doctors-popup__main-screen-item wrap-input --fz16 --small">
+                  <div class="wrap-input__name">Услуга</div>
+  
+                  <select>
+                    <option selected value="Не выбрано">Не выбрано</option>
+
+                    <option selected value="Прием (осмотр, консультация) врача-остеопата повторный">Прием (осмотр,
+                      консультация) врача-остеопата повторный</option>
+                    <option selected value="Остеопатия при заболеваниях центральной нервной системы">Остеопатия при
+                      заболеваниях центральной нервной системы</option>
+                  </select>
+                </div>
+  
+                <div class="doctors-popup__main-screen-item wrap-input --fz16 --small">
+                  <div class="wrap-input__name">Врач</div>
+  
+                  <select>
+                    <option selected value="Не выбрано">Не выбрано</option>
+                    <option selected value="Малышев Илья Владимирович">Малышев Илья Владимирович</option>
+                    <option selected value="Трусова Марина Олеговна">Трусова Марина Олеговна</option>
+                    <option selected value="Федоров Алексей Викторович">Федоров Алексей Викторович</option>
+                    <option selected value="Ластовкина Ольга Юрьевна">Ластовкина Ольга Юрьевна</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="doctors-popup__order order-doctor">
+                <div class="order-doctor__step time-doctors active">
+                  <div class="time-doctors__row">
+                    <div class="time-doctors__column">
+                      <div class="time-doctors__calendar calendar-doctor">
+
+                      </div>
+                    </div>
+
+                    <div class="time-doctors__column">
+                      <div class="time-doctors__clock clock-doctors">
+                        <div class="clock-doctors__top">
+
+                          <div class="clock-doctors__list-time js-list-time">
+                            <div class="clock-doctors__item-time js-time">14:00</div>
+                            <div class="clock-doctors__item-time js-time">15:00</div>
+                            <div class="clock-doctors__item-time js-time">16:00</div>
+                            <div class="clock-doctors__item-time js-time">17:00</div>
+                            <div class="clock-doctors__item-time js-time">18:00</div>
+                          </div>
+
+                          <div class="clock-doctors__tip js-tip active">
+                            <div class="clock-doctors__text">
+                              Сначала выберете врача и услугу
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="clock-doctors__bottom">
+                          <div class="clock-doctors__adress">
+                            Санкт-Петербург – Клиника, Наличная улица, 40к1
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="doctors-popup__card card-doctors-popup">
-                      <div class="card-doctors-popup__wrap">
-                        <div class="card-doctors-popup__avatar">
-                          <img src="./img/avatr-medic-popup.png" alt="">
+                <div class="order-doctor__step result-doctors">
+                  <div class="result-doctors__list">
+                    <div class="result-doctors__item wrap-input --fz16 --small">
+                      <div class="wrap-input__name">Услуга</div>
+
+                      <select>
+                        <option selected value="Прием (осмотр, консультация) врача-остеопата повторный">Прием (осмотр,
+                          консультация) врача-остеопата повторный</option>
+                        <option selected value="Остеопатия при заболеваниях центральной нервной системы">Остеопатия при
+                          заболеваниях центральной нервной системы</option>
+                      </select>
+                    </div>
+
+
+                    <div class="result-doctors__item wrap-input --small">
+                      <div class="wrap-input__name">Дата и время приема</div>
+
+                      <div class="wrap-input__info">
+                        <div class="wrap-input__text">26 сентября, 16:00</div>
+
+                        <div class="wrap-input__icon-calendar js-back">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                            fill="none">
+                            <path
+                              d="M3.75 8.375C3.75 6.16586 5.54086 4.375 7.75 4.375H22.25C24.4591 4.375 26.25 6.16586 26.25 8.375V23.5C26.25 25.7091 24.4591 27.5 22.25 27.5H7.75C5.54086 27.5 3.75 25.7091 3.75 23.5V8.375Z"
+                              stroke="#8EAEBA" stroke-width="1.5" />
+                            <path d="M3.75 11.25H26.25" stroke="#8EAEBA" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M10 2.5L10 6.25" stroke="#8EAEBA" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path d="M20 2.5V6.25" stroke="#8EAEBA" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <circle cx="15" cy="18.75" r="1.25" fill="#8EAEBA" />
+                            <circle cx="20" cy="18.75" r="1.25" fill="#8EAEBA" />
+                            <circle cx="10" cy="18.75" r="1.25" fill="#8EAEBA" />
+                          </svg>
                         </div>
-
-                        <div class="card-doctors-popup__name">Малышев<br>
-                          Илья Владимирович</div>
-
-                        <div class="card-doctors-popup__text">Врач-остеопат, мануальный терапевт, врач спортивной
-                          медицины, врач-реабилитолог, врач-педиатр</div>
-
-                        <div class="card-doctors-popup__price">Прием от 3 000 ₽</div>
-
-                        <a href="#" class="card-doctors-popup__btn main-btn js-add-doctor">Выбрать</a>
                       </div>
+                    </div>
+
+                    <div class="result-doctors__item wrap-input --small">
+                      <div class="wrap-input__name">Вы впервые у доктора?</div>
+
+                      <select>
+                        <option selected value="Первый приём">Первый приём</option>
+                        <option value="Второй приём">Второй приём</option>
+                      </select>
+                    </div>
+
+                    <div class="result-doctors__item wrap-input --small">
+                      <div class="wrap-input__name">Номер телефона</div>
+
+                      <input type="tel">
+                    </div>
+
+                    <div class="result-doctors__item wrap-input --small">
+                      <div class="wrap-input__name">ФИО пациента</div>
+
+                      <input type="text">
                     </div>
                   </div>
 
-                  <div class="swiper-slide">
-                    <div class="doctors-popup__card card-doctors-popup">
-                      <div class="card-doctors-popup__wrap">
-                        <div class="card-doctors-popup__avatar">
-                          <img src="./img/avatr-medic-popup.png" alt="">
-                        </div>
-
-                        <div class="card-doctors-popup__name">Малышев<br>
-                          Илья Владимирович</div>
-
-                        <div class="card-doctors-popup__text">Врач-остеопат, мануальный терапевт, врач спортивной
-                          медицины, врач-реабилитолог, врач-педиатр</div>
-
-                        <div class="card-doctors-popup__price">Прием от 3 000 ₽</div>
-
-                        <a href="#" class="card-doctors-popup__btn main-btn js-add-doctor">Выбрать</a>
+                  <div class="result-doctors__group">
+                    <label class="result-doctors__checkbox checkbox">
+                      <input type="checkbox" checked>
+                      <div class="checkbox__checkmarck"></div>
+                      <div class="checkbox__text">
+                        Я согласен с <a href="#">условиями обработки персональных данных</a>
                       </div>
-                    </div>
+                    </label>
+
+                    <a href="#" class="result-doctors__btn main-btn --small js-next-order">Записаться</a>
                   </div>
-
-                  <div class="swiper-slide">
-                    <div class="doctors-popup__card card-doctors-popup">
-                      <div class="card-doctors-popup__wrap">
-                        <div class="card-doctors-popup__avatar">
-                          <img src="./img/avatr-medic-popup.png" alt="">
-                        </div>
-
-                        <div class="card-doctors-popup__name">Малышев<br>
-                          Илья Владимирович</div>
-
-                        <div class="card-doctors-popup__text">Врач-остеопат, мануальный терапевт, врач спортивной
-                          медицины, врач-реабилитолог, врач-педиатр</div>
-
-                        <div class="card-doctors-popup__price">Прием от 3 000 ₽</div>
-
-                        <a href="#" class="card-doctors-popup__btn main-btn js-add-doctor">Выбрать</a>
-                      </div>
-                    </div>
-                  </div>
-
 
                 </div>
               </div>

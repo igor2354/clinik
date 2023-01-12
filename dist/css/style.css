@@ -2760,8 +2760,7 @@ h3 {
   .popup-general.--step-1 .popup-general__body {
     -webkit-box-shadow: 0px 9px 40px rgba(145, 146, 145, 0.3);
             box-shadow: 0px 9px 40px rgba(145, 146, 145, 0.3);
-    border-radius: 10px;
-    background: #eef3f5; }
+    border-radius: 10px; }
   .popup-general.--step-3 .popup-general__group-title {
     padding-top: 50px; }
   .popup-general.--step-4 .popup-general__group-title {
@@ -2788,6 +2787,11 @@ h3 {
   display: none; }
   .doctors-popup__step.active {
     display: block; }
+
+.doctors-popup__main-screen {
+  padding: 30px; }
+  .doctors-popup__main-screen-item:not(:last-child) {
+    margin-bottom: 20px; }
 
 .card-doctors-popup {
   padding-right: 30px; }
@@ -3054,6 +3058,8 @@ h3 {
   .doctors-popup__slider {
     padding: 20px 0;
     margin: 0 20px; }
+  .doctors-popup__main-screen {
+    padding: 30px 15px; }
   .card-doctors-popup {
     padding: 0; }
     .card-doctors-popup__wrap {
@@ -3134,6 +3140,8 @@ h3 {
     .doctors-popup__slider .slider-arrow-next svg {
       width: 20px;
       height: 20px; }
+  .doctors-popup__slider__main-screen {
+    padding: 20px 15px; }
   .doctors-popup__arrows {
     margin-bottom: 15px; }
     .doctors-popup__arrows .slider-arrow-prev {
